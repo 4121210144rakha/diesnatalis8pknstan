@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function episodecard(props) {
+export default function episodecard(props: any) {
     return(
         <div className="hover:scale-105 sm:w-3/12 pb-10 my-8 col-auto rounded-sm ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
             <Image

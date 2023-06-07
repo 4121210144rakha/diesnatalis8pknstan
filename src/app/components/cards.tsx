@@ -1,5 +1,6 @@
 import Link from "next/link"
-export default function card(props){
+
+export default function card(props: any){
     return(
         <Link href={{
                 pathname:"formulir/[id]",

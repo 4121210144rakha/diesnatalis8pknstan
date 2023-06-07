@@ -28,18 +28,12 @@ export default function Home() {
           </p>
         </div>
           
+        {/* Slider */}
         <div className="flex my-10 sm:justify-around flex-col sm:flex-row">
           <Card alamat="opentalent" src="https://images.unsplash.com/photo-1685396562089-c4b00814d30a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=647&q=80" heading="Næroyfjorden" paragraph="NORWAY"/>
           <Card src="https://images.unsplash.com/photo-1602088693260-78f2c76287c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="Antelope Canyon" paragraph="UNITED STATES"/>
           <Card src="https://images.unsplash.com/photo-1485684884494-0149f7871a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=663&q=80" heading="Grossglockner" paragraph="AUSTRIA"/>
         </div>
-
-        <Link
-          href={"/formulir/opentalent"}
-          className="text-blue-500 hover:underline"
-        >
-          SEE MORE &gt;
-        </Link>
       </div>
 
       <div id="Journal" className="py-8">
@@ -50,9 +44,9 @@ export default function Home() {
           </p>
         </div>
           
-        <div className="flex my-10 sm:justify-around items-end flex-col sm:flex-row">
+        <div className="flex my-10 sm:justify-around items-start flex-col sm:flex-row">
           <EpisodeCard src={"https://images.unsplash.com/photo-1516687401797-25297ff1462c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} date="MAY 30, 2017" title="An Unforgettable" caption="If you only have one day to visit Yosemite National Park and you want to make the most out of it."/>
-          <EpisodeCard src={"https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"} date="MAY 28, 2017" title="Symphonies in Steel" caption="Crossing the Golden Gate Bridge from San Fransisco, you arrive in Marin even before landing on solid ground."/>
+          <EpisodeCard src={"https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"} date="???" title="Episode 2" caption="Coming soon ..."/>
         </div>
 
         <Link

@@ -37,7 +37,7 @@ body {
 }
 
 .mask-image-to-bottom {
-  mask-image: linear-gradient(to top, transparent 2%, #0f0f0f 30%);
+  mask-image: linear-gradient(to top, transparent 1%, #0f0f0f 45%);
 }
 
 
