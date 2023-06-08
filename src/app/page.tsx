@@ -7,14 +7,6 @@ import EpisodeCard from './components/episodecard'
 import React from 'react'
 
 export default function Home() {
-  window.onscroll = function() {myFunction()};
-
-  function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-  }
   return (
     <main className="text-center">
       <div className="h-screen mask-image-to-bottom first-background">
