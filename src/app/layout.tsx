@@ -1,9 +1,9 @@
 import './globals.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
-
 const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 import Footer from './components/footer'
 import Navbar from './components/navbar'
+
 export const metadata = {
   title: 'Dies Natalis PKN STAN',
   description: 'Manifestasi Harmoni Untuk Ciptakan Gemilang Karya',

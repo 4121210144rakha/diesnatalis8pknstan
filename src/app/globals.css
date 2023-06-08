@@ -18,7 +18,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #0F0E0E
+  background: #0F0E0E;
+  color: white;
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */

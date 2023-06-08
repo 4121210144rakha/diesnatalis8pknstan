@@ -7,10 +7,18 @@ import EpisodeCard from './components/episodecard'
 import React from 'react'
 
 export default function Home() {
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
   return (
     <main className="text-center">
       <div className="h-screen mask-image-to-bottom first-background">
-        <video className="object-cover fixed h-screen w-screen hidden sm:block -z-50 top-0 left-0 right-0 bottom-0" id="videoBackground" muted autoPlay loop><source src="/videos/Beach.mp4" type='video/mp4'/></video>
+        <video className="mask-image-to-bottom object-cover fixed h-screen w-screen hidden sm:block -z-50 top-0 left-0 right-0 bottom-0" id="videoBackground" muted autoPlay loop><source src="/videos/Beach.mp4" type='video/mp4'/></video>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-7xl"><strong>The Great Outdoors</strong></h1>
           <p className="pt-10">Wander often. Wonder always</p>
