@@ -30,12 +30,11 @@ export default function navbar() {
             >
                 <h2>JOURNAL</h2>
             </Link>
-            <Link
-                href={"#"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
-            >
-                <h2>SEARCH</h2>
-            </Link>
+            <input
+                type="search"
+                placeholder="SEARCH"
+                className="hover:scale-110 hidden sm:block transiton-all duration-150 ease-in-out bg-transparent pl-4 w-24 placeholder-white outline-none focus:border-b pb-1 focus:border-white"
+            />
         </nav>
     )
 }

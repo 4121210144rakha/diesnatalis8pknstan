@@ -9,16 +9,14 @@ import React from 'react'
 export default function Home() {
   return (
     <main className="text-center">
-      <div className="h-screen mask-image-to-bottom first-background">
-        <video className="mask-image-to-bottom object-cover fixed h-screen w-screen hidden sm:block -z-50 top-0 left-0 right-0 bottom-0" id="videoBackground" muted autoPlay loop><source src="/videos/Beach.mp4" type='video/mp4'/></video>
+      <div className="h-screen mask-image-to-bottom">
+        <video className="mask-image-to-bottom object-cover fixed h-screen w-screen -z-50 top-0 left-0 right-0 bottom-0" id="videoBackground" muted autoPlay loop><source src="/videos/header.mp4" type='video/mp4'/></video>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-7xl"><strong>The Great Outdoors</strong></h1>
-          <p className="pt-10">Wander often. Wonder always</p>
-          <button className="rounded-full" type="button">PLAY/PAUSE</button>
+          <h1 className="sm:text-8xl text-6xl" style={{fontFamily:"Crima"}}><strong>Dies Natalis</strong></h1>
+          <p className="mt-8">Manifestasi Harmoni Untuk Ciptakan Gemilang Karya</p>
+          {/* <button className="rounded-full" type="button">PLAY/PAUSE</button> */}
         </div>  
       </div>
-
-      
 
       <div id="Explore" className="py-8">
         <div className="">
@@ -29,10 +27,12 @@ export default function Home() {
         </div>
           
         {/* Slider */}
-        <div className="flex my-10 sm:justify-around flex-col sm:flex-row">
-          <Card alamat="opentalent" src="https://images.unsplash.com/photo-1685396562089-c4b00814d30a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=647&q=80" heading="Næroyfjorden" paragraph="NORWAY"/>
-          <Card src="https://images.unsplash.com/photo-1602088693260-78f2c76287c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="Antelope Canyon" paragraph="UNITED STATES"/>
-          <Card src="https://images.unsplash.com/photo-1485684884494-0149f7871a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=663&q=80" heading="Grossglockner" paragraph="AUSTRIA"/>
+        <div className="flex my-10 sm:justify-around items-center flex-col lg:flex-row">
+          <Card className="disabled:scale-100" alamat="opentalent" src="https://images.unsplash.com/photo-1565035010268-a3816f98589a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" heading="Opening Ceremony" paragraph="GEDUNG G"/>
+          <Card alamat="/" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Webinar Internasional" paragraph="ZOOM"/>
+          <Card alamat="/" src="https://plus.unsplash.com/premium_photo-1661856221850-8d6cc299049c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Sidang Senat" paragraph="GEDUNG G"/>
+          <Card alamat="/" src="https://images.unsplash.com/photo-1603910234616-3b5f4a6be2b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Special Event" paragraph="GEDUNG G"/>
+          <Card alamat="/" src="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" heading="Closing Ceremony" paragraph="GEDUNG G"/>
         </div>
       </div>
 
@@ -57,9 +57,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="py-8 h-screen mask-image-to-top mask-image-to-bottom" style={{backgroundImage:`url("https://images.unsplash.com/photo-1579961611811-54b643ddbd91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")`, backgroundSize:"cover"}}>
-
-      </div>
+      
     </main>
   )
 }

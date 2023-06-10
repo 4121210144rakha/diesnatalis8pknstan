@@ -12,7 +12,7 @@ export default function episodecard(props: any) {
             />
             <p className="pt-8"><small>{props.date}</small></p>
             <h3 className="text-2xl pt-4 pb-10"><strong>{props.title}</strong></h3>
-            <p>{props.caption}</p>
+            <p className="px-4">{props.caption}</p>
         </div>
     )
 }

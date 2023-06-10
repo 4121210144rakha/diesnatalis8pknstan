@@ -45,3 +45,44 @@ body {
 .mask-image-to-top {
   mask-image: linear-gradient(to bottom, transparent 2%, #0f0f0f 30%);
 }
+
+
+/**
+  Component
+**/
+
+.card-input-element {
+  display: none;
+}
+
+.card-input {
+  margin: 10px;
+  padding: 00px;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+  box-shadow: 0 0 1px 1px #2ecc71;
+  --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.shine {
+  animation: glitter 6s linear 0s infinite normal;
+  -webkit-animation: glitter 6s linear 0s infinite normal;
+  -moz-animation: glitter 8s linear 0s infinite normal;
+  -ms-animation: glitter 8s linear 0s infinite normal;
+  -o-animation: glitter 8s linear 0s infinite normal;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
