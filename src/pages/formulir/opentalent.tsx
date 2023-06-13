@@ -32,6 +32,7 @@ export default function opentalent() {
                                 <input id="pesertaAlumni" name="peserta" required type="radio" value="Alumni" className="peer hidden"/>
                                 <label htmlFor="pesertaAlumni" className="block cursor-pointer select-none rounded-sm p-2 text-center hover:scale-105 hover:font-semibold hover:bg-black hover:rounded-sm hover:z-10 peer-checked:bg-black peer-checked:scale-105 peer-checked:text-white peer-checked:font-semibold peer-checked:border-white peer-checked:border transition-all duration-300 ease-in-out">Alumni</label>
                             </div>
+                            
                         </div>
                     </div>
                     
@@ -51,6 +52,10 @@ export default function opentalent() {
                                 <input type="tel" id="tel" name="tel" required className=" w-full bg-transparent px-4 pb-2 border-b text-sm peer border-zinc-400 focus:border-white outline-none"/>
                                 <label htmlFor="tel" className="-z-50 transform transition-all absolute top-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Nomor WhatsApp</label>    
                             </div>
+                        </div>
+                        <div className="w-full my-8 relative group">
+                            <input type="text" id="alamat" name="alamat" required className="w-full bg-transparent px-4 pb-2 border-b text-sm peer border-zinc-400 focus:border-white disabled:bg-transparent outline-none"/>
+                            <label htmlFor="alamat" className="-z-50 transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Alamat</label>
                         </div>
                     </div>
                     <button type="submit" value={"submit"} onClick={() => confirm("Apakah Anda yakin ingin mengumpulkan formulir ini?\nMohon periksa kembali formulir sebelum Anda kumpulkan. Pastikan data yang diisi sesuai dan benar.")} className="text-black rounded-sm bg-white hover:scale-110 transition-all duration-300 ease-in-out px-4 py-2"><b>Kirim</b></button>
