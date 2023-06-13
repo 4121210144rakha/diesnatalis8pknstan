@@ -21,7 +21,7 @@ export default function anunforgetable() {
         var video2 = document.getElementById('video2');
         video1?.classList.add("-z-50");
         video2?.classList.remove("-z-50");
-        if(video1 instanceof HTMLVideoElement) {
+        if(video2 instanceof HTMLVideoElement) {
             video2.play();    
         }
         document.getElementById("opsi")?.classList.add("hidden");
