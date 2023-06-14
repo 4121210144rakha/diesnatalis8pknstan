@@ -12,7 +12,6 @@ import React from 'react'
 import Lock from '../../public/locked.svg'
 import Diesnat from '../../public/image/Tipografi DN8.png'
 
-
 export default function Home() {
   return (
     <main className="text-center">
@@ -26,7 +25,7 @@ export default function Home() {
 
       <div id="Explore" className="py-8">
         <div className="">
-          <h2 className="text-5xl"><strong>Explore the World</strong></h2>
+          <h2 className="text-5xl" style={{fontFamily:"Crima"}}><strong>Explore the World</strong></h2>
           <p className="py-8">
             We seek to provide the most authentic content from athletes, adventurers, explorers and travellers around the world. Our long-term mission is to educate, inspire, and enable all peoples to experience & protect wilderness.
           </p>
@@ -72,7 +71,7 @@ export default function Home() {
 
       <div id="Journal" className="py-8">
         <div className="">
-          <h2 className="text-5xl"><strong>The Journal</strong></h2>
+          <h2 className="text-5xl" style={{fontFamily:"Crima"}}><strong>The Journal</strong></h2>
           <p className="py-8">
             Our favorite stories about public lands and opportunities for you to get involved in protecting your outdoor experiences.
           </p>

@@ -1,8 +1,13 @@
+// Styling
 import './globals.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ['latin'] })
+
+// components
 import Footer from './components/footer'
 import Navbar from './components/navbar'
+
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Dies Natalis PKN STAN',
@@ -20,6 +25,7 @@ export default function RootLayout({
         <Navbar/>
         {children}
         <Footer/>
+        <Analytics/>
       </body>
     </html>
   )
