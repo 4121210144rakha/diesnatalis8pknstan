@@ -3,13 +3,13 @@ export default function navbar() {
     return(
         <nav className="flex sm:py-6 py-4 items-center flex-row top-0 w-screen h-16 sm:h-20 lg:bottom-0 z-50 fixed text-center justify-evenly backdrop-blur-md">
             <Link
-                href={"#"}
+                href={"/"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
                 <h2>ABOUT</h2>
             </Link>
             <Link
-                href={"#Explore"}
+                href={"/#Explore"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
                 <h2>EXPLORE</h2>
