@@ -1,12 +1,12 @@
 import Link from "next/link"
 import '../../app/globals.css'
 
-export default function footer(){
+export default function Footer(){
     return(
-        <footer>
-            <div className="bg-black w-screen flex items-end sm:items-center justify-center py-4 flex-col sm:flex-row mask-image-to-top">
-                <p className="px-4">© 2023 Dies Natalis 8 PKN STAN. All rights reserved &nbsp;|</p>
-                <div className="flex flex-col hidden sm:block sm:flex-row">
+        <footer className="bg-inherit w-screen flex items-end sm:items-center justify-center py-4 flex-col sm:flex-row mask-image-to-top">
+            <p className="px-4">© 2023 Dies Natalis 8 PKN STAN. All rights reserved &nbsp;|</p>
+            <div className="hidden sm:block ">
+                <div className="flex flex-col sm:flex-row">
                     <Link href="#" className="sm:pl-4 py-4">
                         ABOUT
                     </Link>
@@ -20,7 +20,7 @@ export default function footer(){
                     </Link>
 
                     <Link href="#" className="sm:pl-4 py-4">
-                        SEARCH
+                        PANDUAN
                     </Link>
                 </div>
             </div>
