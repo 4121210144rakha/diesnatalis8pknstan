@@ -45,8 +45,6 @@ body {
 .mask-image-to-top {
   mask-image: linear-gradient(to bottom, transparent 2%, #0F0E0E 30%);
 }
-
-
 /**
   Component
 **/
@@ -86,3 +84,33 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: #fff !important;
 } */
+input[type='range'] {
+  -webkit-appearance: none !important;
+  background:none;
+  height:5px;
+  border-radius: 24px;
+  border: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background:#FEFEFE;
+  height:10px;
+  width:10px;
+  border-radius: 100%;
+}
+
+progress {
+  border-radius: 7px; 
+  width: 80%;
+  height: 4px;
+}
+progress::-webkit-progress-bar {
+  background-color: #9b9b9b;
+}
+progress::-webkit-progress-value {
+  background-color: #FEFEFE;
+  border-radius: 7px;
+}
+progress::-moz-progress-bar {
+  /* style rules */
+}

@@ -25,10 +25,10 @@ export default function Navbar() {
             </Link>
 
             <Link
-                href={"#Journal"}
+                href={"/#Competition"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
-                <h2>JOURNAL</h2>
+                <h2>COMPETITION</h2>
             </Link>
             <input
                 type="search"

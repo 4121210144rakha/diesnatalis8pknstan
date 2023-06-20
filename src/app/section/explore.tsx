@@ -17,7 +17,7 @@ export default function Explore() {
             </div>
             
             <div className="flex items-center justify-center">
-                <Link href={"/events"} className="hover:underline text-blue-500 hover:scale-105 transition duration-150 ease-in-out w-fit">ALL EVENTS &gt;</Link>
+                <Link href={"/events"} className="hover:underline text-blue-500 w-fit">ALL EVENTS &gt;</Link>
             </div>
         </section>
     )
