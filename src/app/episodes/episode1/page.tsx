@@ -1,8 +1,8 @@
-"use client"
-import React, { useEffect, useRef, useState } from 'react';
+// "use client"
+// import React, { useEffect, useRef, useState } from 'react';
 
-export default function AnUnforgettable() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+export default function Episode1() {
+  // const videoRef = useRef<HTMLVideoElement>(null);
   // const [currentTime, setCurrentTime] = useState(0);
   
 
@@ -34,7 +34,7 @@ export default function AnUnforgettable() {
     <>
       <section className="items-center justify-center mt-20 flex flex-col">
         <div className='flex flex-col border border-green-500 overflow-hidden group relative' style={{height:document.getElementById("video1")?.style.height}}>
-          <video id="video1" ref={videoRef} controls className="border border-red-500 w-screen object-cover">
+          <video id="video1" controls className="border border-red-500 w-screen object-cover">
               <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
           </video>
 
