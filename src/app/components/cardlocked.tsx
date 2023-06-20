@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+
 // svg
 import Lock from '../../../public/locked.svg'
 
