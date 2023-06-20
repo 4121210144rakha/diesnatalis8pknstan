@@ -3,7 +3,7 @@ import '../globals.css'
 export default function Loading() {
     return(
         <React.Fragment>
-            <div className="bg-black w-screen h-screen">
+            <div className="bg-black w-screen h-screen z-50">
                 <video className="sm:w-screen h-screen object-cover" autoPlay>
                     <source src={"/videos/loading.mp4"} type="video/mp4"/>
                 </video>
