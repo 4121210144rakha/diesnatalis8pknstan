@@ -3,32 +3,32 @@ import React, { useEffect, useRef, useState } from 'react';
 
 export default function AnUnforgettable() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [currentTime, setCurrentTime] = useState(0);
+  // const [currentTime, setCurrentTime] = useState(0);
   
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
+  // useEffect(() => {
+  //   const videoElement = videoRef.current;
 
-    const handlePlay = () => {
+  //   const handlePlay = () => {
 
-    };
+  //   };
 
-    const handleTimeUpdate = () => {
-      setCurrentTime(videoElement.currentTime);
-    };
+  //   const handleTimeUpdate = () => {
+  //     setCurrentTime(videoElement.currentTime);
+  //   };
 
-    if (videoElement) {
-      videoElement.addEventListener('play', handlePlay);
-      videoElement.addEventListener('timeupdate', handleTimeUpdate);
-    }
+  //   if (videoElement) {
+  //     videoElement.addEventListener('play', handlePlay);
+  //     videoElement.addEventListener('timeupdate', handleTimeUpdate);
+  //   }
 
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener('play', handlePlay);
-        videoElement.removeEventListener('timeupdate', handleTimeUpdate);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (videoElement) {
+  //       videoElement.removeEventListener('play', handlePlay);
+  //       videoElement.removeEventListener('timeupdate', handleTimeUpdate);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
