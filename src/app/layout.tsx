@@ -13,8 +13,6 @@ export const metadata = {
   title: 'Dies Natalis PKN STAN',
   description: 'Manifestasi Harmoni Untuk Ciptakan Gemilang Karya',
   keywords: 'PKN STAN, Dies Natalis, Ulang Tahun',
-  author: 'gingercat-pisqr',
-  viewport: 'width=device-width, initial-scale=1.0',
 }
 
 export default function RootLayout({
