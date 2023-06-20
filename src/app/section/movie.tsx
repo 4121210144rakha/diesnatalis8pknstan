@@ -12,7 +12,7 @@ export default function Movie() {
             </div>
                 
             <div className="flex my-10 sm:justify-around items-start flex-col sm:flex-row">
-                <EpisodeCard alamat="/episode1" title="Episode 1: An Unforgetable" src={"https://images.unsplash.com/photo-1516687401797-25297ff1462c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} date="MAY 30, 2017" heading="An Unforgettable" caption="If you only have one day to visit Yosemite National Park and you want to make the most out of it."/>
+                <EpisodeCard alamat="#" title="Episode 1: An Unforgetable" src={"https://images.unsplash.com/photo-1516687401797-25297ff1462c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} date="MAY 30, 2017" heading="An Unforgettable" caption="If you only have one day to visit Yosemite National Park and you want to make the most out of it."/>
             </div>
 
             <div className="flex items-center justify-center">

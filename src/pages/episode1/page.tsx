@@ -32,13 +32,13 @@ export default function Episode1() {
 
   return (
     <>
-      <section className="items-center justify-center mt-20 flex flex-col">
+      {/* <section className="items-center justify-center mt-20 flex flex-col">
         <div className='flex flex-col border border-green-500 overflow-hidden group relative' style={{height:document.getElementById("video1")?.style.height}}>
           <video id="video1" controls className="border border-red-500 w-screen object-cover">
               <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
           </video>
 
-          {/* <div className="">
+          <div className="">
               <button
                   onClick={()=>{
                       let btnPlay = document.getElementById("btnPlay");
@@ -85,7 +85,7 @@ export default function Episode1() {
                     step={0.001}
                 />
               </div >
-          </div> */}
+          </div>
         
           <div
               id='Opsi'
@@ -102,7 +102,7 @@ export default function Episode1() {
         </div>
 
         
-      </section>
+      </section> */}
     </>
     );
 }
