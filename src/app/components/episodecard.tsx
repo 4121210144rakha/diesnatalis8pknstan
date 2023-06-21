@@ -4,14 +4,14 @@ import Link from "next/link"
 export default function episodecard(props: any) {
     return(
         <Link href={{
-            pathname:"episodes/[id]",
+            pathname:"[id]",
             query: {
                 id: props.alamat,
                 title: props.title
             }
         }} 
-        as={`episodes/${props.alamat}`}
-        className="hover:scale-105 sm:w-96 pb-10 my-8 col-auto rounded-sm ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
+        as={`${props.alamat}`}
+        className="hover:scale-105 sm:w-96 pb-10 my-8 col-auto rounded-lg overflow-hidden ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
             <Image
                 src={props.src}
                 // placeholder="blur"

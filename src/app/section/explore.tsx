@@ -5,9 +5,9 @@ import Link from "next/link"
 export default function Explore() {
     return(
         <section id="" className="my-16">
-            <h2 className="text-5xl sm:text-7xl font-semibold pt-10" style={{fontFamily:"Crima"}}>Explore the World</h2>
+            <h2 className="text-5xl sm:text-7xl font-semibold pt-10" style={{fontFamily:"Crima"}}>Uncover the Spectacle</h2>
             <p className="py-8 mx-8">
-                We seek to provide the most authentic content from athletes, adventurers, explorers and travellers around the world. Our long-term mission is to educate, inspire, and enable all peoples to experience & protect wilderness.
+                Immerse yourself in a myriad of captivating events that promise to astound and delight at every turn.
             </p>
 
             <div className="flex flex-col sm:flex-row my-10 sm:justify-evenly justify-center items-center">

@@ -12,7 +12,7 @@ export default function Navbar() {
                 href={"/#Explore"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
-                <h2>EXPLORE</h2>
+                <h2>EVENTS</h2>
             </Link>
 
             <Link

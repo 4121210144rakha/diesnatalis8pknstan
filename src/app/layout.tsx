@@ -12,7 +12,7 @@ import { Analytics } from '@vercel/analytics/react';
 export const metadata = {
   title: 'Dies Natalis PKN STAN',
   description: 'Manifestasi Harmoni Untuk Ciptakan Gemilang Karya',
-  keywords: 'PKN STAN, Dies Natalis, Ulang Tahun',
+  keywords: 'PKN STAN, Dies Natalis, Ulang Tahun, Diesnat, Dies Natalis PKN STAN, Ulang Tahun PKN STAN, Ultah PKN STAN',
 }
 
 export default function RootLayout({

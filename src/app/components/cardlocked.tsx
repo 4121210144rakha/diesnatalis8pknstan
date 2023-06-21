@@ -18,7 +18,7 @@ export default function CardLocked(props:any) {
                     }
                 }} 
                 as={`${props.alamat}`}
-                className="text-blue-500 hover:underline">Ada pertanyaan?</Link>
+                className="text-blue-500 hover:underline hidden group-hover:block">Ada pertanyaan?</Link>
             </div>
         </div>
     )
