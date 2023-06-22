@@ -4,8 +4,7 @@ import Image from 'next/image'
 import { useRef, useEffect } from 'react'
 
 export default function Lombacard(props:any) {
-    const fadeIn = useRef(null);
-    
+    const fadeIn = useRef<HTMLDivElement|null>(null);
     useEffect(()=>{
         const options = {
             root:null,
@@ -14,14 +13,20 @@ export default function Lombacard(props:any) {
         };
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach((entry)=>{
-                if(entry.isIntersecting){
+                if(entry.isIntersecting && fadeIn.current) {
                     fadeIn.current.classList.add('fade-in');
                 }
             });
         }, options);
 
-        observer.observe(fadeIn.current);
+        if (fadeIn.current){observer.observe(fadeIn.current);}
+        return () => {
+            if (fadeIn.current) {
+                observer.unobserve(fadeIn.current);
+            }
+        };
     },[]);
+
 
     return(
         <div ref={fadeIn} className="fade-container group my-4 items-center justify-center flex-col overflow-hidden rounded-lg hover:scale-105 hover:border hover:border-gray-500 transition duration-200 ease-in-out mx-4" style={{height:"28rem", width:"20rem"}}>

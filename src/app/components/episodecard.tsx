@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useRef, useEffect } from 'react'
 
 export default function Episodecard(props: any) {
-    const fadeIn = useRef(null);
+    const fadeIn = useRef<HTMLDivElement|null>(null);
     
     useEffect(()=>{
         const options = {
@@ -14,34 +14,41 @@ export default function Episodecard(props: any) {
         };
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach((entry)=>{
-                if(entry.isIntersecting){
+                if(entry.isIntersecting && fadeIn.current) {
                     fadeIn.current.classList.add('fade-in');
                 }
             });
         }, options);
 
-        observer.observe(fadeIn.current);
-    },[]);
-    return(
-        <Link ref={fadeIn} href={{
-            pathname:"[id]",
-            query: {
-                id: props.alamat,
-                title: props.title
+        if (fadeIn.current){observer.observe(fadeIn.current);}
+        return () => {
+            if (fadeIn.current) {
+                observer.unobserve(fadeIn.current);
             }
-        }} 
-        as={`${props.alamat}`}
-        className="fade-container hover:scale-105 sm:w-96 pb-10 my-8 col-auto rounded-lg overflow-hidden ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
-            <Image
-                src={props.src}
-                // placeholder="blur"
-                width={700}
-                height={700}
-                alt="gambar"
-            />
-            <p className="pt-8"><small>{props.date}</small></p>
-            <h3 className="text-2xl pt-4 pb-10"><strong>{props.heading}</strong></h3>
-            <p className="px-4">{props.caption}</p>
-        </Link>
+        };
+    },[]);
+
+    return(
+        <div ref={fadeIn} className="fade-container hover:scale-105 sm:w-96 pb-10 my-8 col-auto rounded-lg overflow-hidden ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
+            <Link href={{
+                pathname:"[id]",
+                query: {
+                    id: props.alamat,
+                    title: props.title
+                }
+            }} 
+            as={`${props.alamat}`}
+            >
+                <Image
+                    src={props.src}
+                    width={700}
+                    height={700}
+                    alt="gambar"
+                />
+                <p className="pt-8"><small>{props.date}</small></p>
+                <h3 className="text-2xl pt-4 pb-10"><strong>{props.heading}</strong></h3>
+                <p className="px-4">{props.caption}</p>
+            </Link>
+        </div>
     )
 }
