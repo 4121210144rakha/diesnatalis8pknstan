@@ -3,7 +3,7 @@ export default function Navbar() {
     return(
         <nav className="flex sm:py-6 py-4 items-center flex-row top-0 w-screen h-16 sm:h-20 lg:bottom-0 z-10 fixed text-center justify-evenly backdrop-blur-md">
             <Link
-                href={"/"}
+                href={"/#"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
                 <h2>ABOUT</h2>
@@ -16,7 +16,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-                href={"/"}
+                href={"/#"}
             >
                 <svg className="hover:scale-110 transiton-all duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30"
                     style={{fill:"#FFFFFF"}}>

@@ -37,13 +37,7 @@ export default function CardLocked(props:any) {
                 <h3 className="text-lg group-hover:hidden"><b>{props.heading}</b></h3>
                 <p className="group-hover:hidden">{props.place}</p>
                 <Image className="hidden group-hover:block" src={Lock} width={30} height={30} alt='Lock'/>
-                <Link href={{
-                    pathname:"[id]",
-                    query: {
-                        id: props.alamat
-                    }
-                }} 
-                as={`${props.alamat}`}
+                <Link href={`${props.alamat}`}
                 target="_blank" rel="noopener noreferrer"
                 className="text-blue-500 hover:underline hidden group-hover:block">Ada pertanyaan?</Link>
             </div>

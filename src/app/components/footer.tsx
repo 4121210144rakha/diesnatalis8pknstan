@@ -12,10 +12,10 @@ export default function Footer(){
                 <Link href="#" className="sm:pl-4 py-4 flex w-fit">
                     HANDBOOK
                 </Link>
-                <Link href="#Competition" className="sm:pl-4 py-4 flex w-fit">
+                <Link href="/#Competition" className="sm:pl-4 py-4 flex w-fit">
                     COMPETITION
                 </Link>
-                <Link href="#Events" className="sm:pl-4 py-4 flex w-fit">
+                <Link href="/#Events" className="sm:pl-4 py-4 flex w-fit">
                     EVENTS
                 </Link>
                 <Link href="#" className="sm:pl-4 py-4 flex w-fit">

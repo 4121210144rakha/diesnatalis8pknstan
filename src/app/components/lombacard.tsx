@@ -34,47 +34,23 @@ export default function Lombacard(props:any) {
             <div id="down" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out px-2 mask-image-to-top bg-black bg-opacity-80">
                 <h3 className="font-semibold text-lg pt-12">{props.heading}</h3>
                 <p className="">{props.caption}</p>
-                <Link href={{
-                    pathname:"[id]",
-                    query: {
-                        id: props.alamat
-                    }
-                }} 
-                as={`${props.alamat}`}
+                <Link href={`${props.alamat}`}
                 className="flex flex-col justify-center h-fit bg-white text-black font-semibold py-1 px-2 mt-6 mb-2 rounded-lg hover:scale-105 transition ease-in-out duration-150 text-center"
                 target="_blank" rel="noopener noreferrer"
                 >
                     Play Now!
                 </Link>
-                <Link href={{
-                        pathname:"[id]",
-                        query: {
-                            id: props.panduan
-                        }
-                    }} 
-                    as={`${props.panduan}`}
+                <Link href={`${props.panduan}`}
                     target="_blank" rel="noopener noreferrer"
                     className="flex w-fit h-fit text-blue-500 hover:underline transition ease-in-out duration-150"
                 >
                     Panduan
                 </Link>
                 <div className="flex flex-row justify-between pb-4">
-                    <Link href={{
-                            pathname:"[id]",
-                            query: {
-                                id: props.wa
-                            }
-                        }} 
-                        as={`${props.wa}`}
+                    <Link href={`${props.wa}`}
                         target="_blank" rel="noopener noreferrer"
                         className="flex w-fit h-fit text-blue-500 hover:underline transition ease-in-out duration-150">Ada pertanyaan?</Link>
-                    <Link href={{
-                            pathname:"[id]",
-                            query: {
-                                id: props.check
-                            }
-                        }} 
-                        as={`${props.check}`}
+                    <Link href={`${props.check}`}
                         target="_blank" rel="noopener noreferrer"
                         className="flex w-fit h-fit text-blue-500 hover:underline transition ease-in-out duration-150">Sudah mendaftar?</Link>
                 </div>

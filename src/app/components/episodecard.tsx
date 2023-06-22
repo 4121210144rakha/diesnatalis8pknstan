@@ -30,14 +30,7 @@ export default function Episodecard(props: any) {
 
     return(
         <div ref={fadeIn} className="fade-container hover:scale-105 sm:w-96 pb-10 my-8 col-auto rounded-lg overflow-hidden ring-transparent transition ring-1 duration-300 ease-in-out hover:ring-gray-400">
-            <Link href={{
-                pathname:"[id]",
-                query: {
-                    id: props.alamat,
-                    title: props.title
-                }
-            }} 
-            as={`${props.alamat}`}
+            <Link href={`${props.alamat}`}
             >
                 <Image
                     src={props.src}

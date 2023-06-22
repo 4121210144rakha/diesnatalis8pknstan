@@ -5,7 +5,7 @@ import Lombacard from '../components/lombacard'
 
 export default function Competition() {
     return(
-        <section id='#Competition' className="my-16">
+        <section id='Competition' className="my-16">
             <h2 className="text-5xl sm:text-7xl" style={{fontFamily:"Crima"}}><strong>Competition Board</strong></h2>
             <p className="py-8 mx-8"> Dive into a diverse array of captivating competitions and seize the chance to claim exhilarating victories and amazing prizes!</p>
             <div className="flex flex-col lg:flex-row justify-center sm:justify-evenly items-center">
