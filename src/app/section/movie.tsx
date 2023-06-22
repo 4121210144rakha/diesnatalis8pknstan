@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EpisodeCard from '../components/episodecard'
 export default function Movie() {
     return(
-        <section id="Journal" className="py-8">
+        <section id="Crack the Code" className="py-8">
             <div className="">
                 <h2 className="text-5xl" style={{fontFamily:"Crima"}}><strong>Crack the Code</strong></h2>
                 <p className="py-8">
@@ -16,7 +16,7 @@ export default function Movie() {
             </div>
 
             <div className="flex items-center justify-center">
-                <Link href={"/episodes"} className="hover:underline text-blue-500 transition duration-150 ease-in-out w-fit">ALL EPISODES &gt;</Link>
+                <Link href={"#"} className="hover:underline text-blue-500 transition duration-150 ease-in-out w-fit">ALL EPISODES &gt;</Link>
             </div>
         </section>
         

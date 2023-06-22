@@ -9,7 +9,7 @@ export default function Navbar() {
                 <h2>ABOUT</h2>
             </Link>
             <Link
-                href={"/#Explore"}
+                href={"/#Events"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
             >
                 <h2>EVENTS</h2>
@@ -30,11 +30,17 @@ export default function Navbar() {
             >
                 <h2>COMPETITION</h2>
             </Link>
-            <input
+            <Link
+                href={"/#Crack the Code"}
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
+            >
+                <h2>CRACK THE CODE</h2>
+            </Link>
+            {/* <input
                 type="search"
                 placeholder="SEARCH"
                 className="hover:scale-110 hidden sm:block transiton-all duration-150 ease-in-out bg-transparent pl-4 w-24 placeholder-white outline-none focus:border-b pb-1 focus:border-white"
-            />
+            /> */}
         </nav>
     )
 }

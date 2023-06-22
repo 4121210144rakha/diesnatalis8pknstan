@@ -1,10 +1,31 @@
-import '../globals.css'
+'use client'
 import Link from "next/link"
 import Image from 'next/image'
+import { useRef, useEffect } from 'react'
+
 export default function lombacard(props:any) {
+    const fadeIn = useRef(null);
+    
+    useEffect(()=>{
+        const options = {
+            root:null,
+            rootMargin: '0px',
+            threshold:0.5,
+        };
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    fadeIn.current.classList.add('fade-in');
+                }
+            });
+        }, options);
+
+        observer.observe(fadeIn.current);
+    },[]);
+
     return(
-        <div className="group my-4 items-center justify-center flex-col overflow-hidden rounded-lg hover:scale-105 hover:border hover:border-gray-500 transition duration-200 ease-in-out mx-4" style={{height:"28rem", width:"20rem"}}>
-            <Image src={props.image} alt="Gambar" width={150} height={200} loading='lazy' className='rounded-lg flex object-cover w-full h-full' style={{height:"28rem"}}/>
+        <div ref={fadeIn} className="fade-container group my-4 items-center justify-center flex-col overflow-hidden rounded-lg hover:scale-105 hover:border hover:border-gray-500 transition duration-200 ease-in-out mx-4" style={{height:"28rem", width:"20rem"}}>
+            <Image src={props.image} alt="Gambar" width={150} height={200} className='rounded-lg flex object-cover w-full h-full' style={{height:"28rem"}}/>
             <div id="down" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out px-2 mask-image-to-top bg-black bg-opacity-80">
                 <h3 className="font-semibold text-lg pt-12">{props.heading}</h3>
                 <p className="">{props.caption}</p>

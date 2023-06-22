@@ -114,3 +114,11 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   /* style rules */
 }
+
+.fade-container {
+  opacity: 0;
+}
+
+.fade-container.fade-in {
+  opacity: 1;
+}
