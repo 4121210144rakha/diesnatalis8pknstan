@@ -36,7 +36,7 @@ export default function CardLocked(props:any) {
             <div className="group bottom-0 pb-6 hover:backdrop-blur-sm items-center flex hover:justify-center justify-end flex-col h-full transition duration-200 ease-in-out rounded-xl">
                 <h3 className="text-lg group-hover:hidden"><b>{props.heading}</b></h3>
                 <p className="group-hover:hidden">{props.place}</p>
-                <Image className="hidden group-hover:block" src={Lock} width={30} height={30} alt='Lock' loading="lazy"/>
+                <Image className="hidden group-hover:block" src={Lock} width={30} height={30} alt='Lock'/>
                 <Link href={{
                     pathname:"[id]",
                     query: {
@@ -44,6 +44,7 @@ export default function CardLocked(props:any) {
                     }
                 }} 
                 as={`${props.alamat}`}
+                target="_blank" rel="noopener noreferrer"
                 className="text-blue-500 hover:underline hidden group-hover:block">Ada pertanyaan?</Link>
             </div>
         </div>
