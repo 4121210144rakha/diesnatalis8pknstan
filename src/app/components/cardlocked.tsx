@@ -7,7 +7,7 @@ import { useRef,useEffect } from 'react'
 import Lock from '../../../public/locked.svg'
 
 export default function CardLocked(props:any) {
-    const fadeIn = useRef(null);
+    const fadeIn = useRef<HTMLDivElement|null>(null);
     
     useEffect(()=>{
         const options = {
@@ -17,13 +17,18 @@ export default function CardLocked(props:any) {
         };
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach((entry)=>{
-                if(entry.isIntersecting) {
+                if(entry.isIntersecting && fadeIn.current) {
                     fadeIn.current.classList.add('fade-in');
                 }
             });
         }, options);
 
-        observer.observe(fadeIn.current);
+        if (fadeIn.current){observer.observe(fadeIn.current);}
+        return () => {
+            if (fadeIn.current) {
+                observer.unobserve(fadeIn.current);
+            }
+        };
     },[]);
 
     return(
