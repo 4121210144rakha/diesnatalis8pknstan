@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef, useEffect } from 'react'
 
-export default function episodecard(props: any) {
+export default function Episodecard(props: any) {
     const fadeIn = useRef(null);
     
     useEffect(()=>{

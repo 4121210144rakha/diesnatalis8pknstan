@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import { useRef, useEffect } from 'react'
 
-export default function lombacard(props:any) {
+export default function Lombacard(props:any) {
     const fadeIn = useRef(null);
     
     useEffect(()=>{
