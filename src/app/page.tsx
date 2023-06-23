@@ -10,6 +10,7 @@ import Explore from './section/explore'
 import Competition from './section/competition'
 import Movie from './section/movie'
 import Header from './section/Header'
+import Tenant from './section/Tenant'
 
 export default function Home() {
   const[isLoad,setLoading] =  useState(true);
@@ -30,6 +31,8 @@ export default function Home() {
         <Competition/>
 
         <Movie/>
+
+        <Tenant/>
 
         <Image src={"/image/footer.jpg"} width={1000} height={1000} alt='Gambar' loading='lazy' style={{width:"100vw",height:"100vh"}} className="flex object-cover object-center mask-image-to-top"/>
       </div>
