@@ -9,7 +9,7 @@ export default function Footer(){
                     CONTACT
                 </Link>
 
-                <Link href="#" className="sm:pl-4 py-4 flex w-fit">
+                <Link href="https://drive.google.com/drive/folders/1-N8lwzgmMlSbOiUeiJZvWtbofr_6U_lH" className="sm:pl-4 py-4 flex w-fit">
                     HANDBOOK
                 </Link>
                 <Link href="/#Competition" className="sm:pl-4 py-4 flex w-fit">

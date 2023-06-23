@@ -9,15 +9,15 @@ export default function Header() {
         let iconPlay = document.getElementById("iconPlay");
         if(video1 instanceof HTMLVideoElement) {
             if(video1.paused) {
-            iconPause?.classList.remove("hidden");
-            iconPause?.classList.add("block");
-            iconPlay?.classList.add("hidden")
-            video1.play();
+                iconPause?.classList.remove("hidden");
+                iconPause?.classList.add("block");
+                iconPlay?.classList.add("hidden")
+                video1.play();
             } else {
-            iconPlay?.classList.remove("hidden");
-            iconPlay?.classList.add("block");
-            iconPause?.classList.add("hidden");
-            video1.pause();
+                iconPlay?.classList.remove("hidden");
+                iconPlay?.classList.add("block");
+                iconPause?.classList.add("hidden");
+                video1.pause();
             }
         }
     }
@@ -25,7 +25,7 @@ export default function Header() {
         <section className="h-screen mask-image-to-bottom">
             <video className="mask-image-to-bottom object-cover fixed h-screen w-screen -z-50 top-0 left-0 right-0 bottom-0" id="videoBackground" autoPlay={true} loop={true}><source src="/videos/trailer.mp4" type='video/mp4'/></video>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Image src={Diesnat} priority width={500} height={500} alt='Logo Diesnat 8' className='w-full xl:px-96'/>
+                <Image src={Diesnat} priority width={500} height={500} alt='Logo Diesnat 8' className='flex w-full xl:mx-96'/>
                 <button type="button"
                     onClick={playPause}
                     itemType='button'
