@@ -27,7 +27,6 @@ export default function Lombacard(props:any) {
         };
     },[]);
 
-
     return(
         <div ref={fadeIn} className="fade-container group my-4 items-center justify-center flex-col overflow-hidden rounded-lg hover:scale-105 hover:border hover:border-gray-500 transition duration-200 ease-in-out mx-4" style={{height:"28rem", width:"20rem"}}>
             <Image src={props.image} alt="Gambar" width={150} height={200} className='rounded-lg flex object-cover w-full h-full' style={{height:"28rem"}}/>
