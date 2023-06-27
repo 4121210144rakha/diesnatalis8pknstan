@@ -1,5 +1,6 @@
 // components
 import CardLocked from "@/app/components/cardlocked"
+import Card from "../components/cards"
 import Link from "next/link"
 
 export default function Explore() {
@@ -12,7 +13,7 @@ export default function Explore() {
             </p>
 
             <div className="flex flex-col md:flex-row my-10 sm:justify-evenly justify-center items-center">
-                <CardLocked alamat="https://wa.me/6281375085265" url="https://images.unsplash.com/photo-1644726270363-e746b37b482b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" heading="Bakti Sosial" place="LAPAK SARMILI"/>
+                <Card alamat="https://wa.me/6281375085265" url="https://images.unsplash.com/photo-1644726270363-e746b37b482b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" heading="Bakti Sosial" place="LAPAK SARMILI"/>
                 <CardLocked alamat="https://wa.me/6281375085265" url="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=685&q=80" heading="Bakti Kampus" place="PKN STAN"/>
                 <CardLocked alamat="https://wa.me/6281375085265" url="https://images.unsplash.com/photo-1669533035765-43cd173ca448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Donor Darah" place="GEDUNG N"/>
             </div>

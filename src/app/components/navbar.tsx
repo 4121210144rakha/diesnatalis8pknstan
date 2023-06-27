@@ -1,7 +1,7 @@
 import Link from "next/link"
 export default function Navbar() {
     return(
-        <nav className="flex sm:py-6 py-4 items-center flex-row top-0 w-screen h-16 sm:h-20 lg:bottom-0 z-10 fixed text-center justify-evenly backdrop-blur-md">
+        <nav id="NavigationBar" className="flex sm:py-6 py-4 items-center flex-row top-0 w-screen h-16 sm:h-20 lg:bottom-0 z-10 fixed text-center justify-evenly backdrop-blur-md">
             <Link
                 href={"/#"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
