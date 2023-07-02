@@ -15,7 +15,7 @@ export default function Header() {
                         let playIcon = document.getElementById("playIcon");
                         let pauseIcon = document.getElementById("pauseIcon");
                         if (backgroundVideo instanceof HTMLVideoElement && backgroundVideo.paused) {
-                            backgroundVideo.current?.play();
+                            backgroundVideo.play();
                             playIcon?.classList.add("hidden");
                             pauseIcon?.classList.remove("hidden");
                         } else {
