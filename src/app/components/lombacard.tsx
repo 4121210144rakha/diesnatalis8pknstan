@@ -37,7 +37,7 @@ export default function Lombacard(props:any) {
                 className="flex flex-col justify-center h-fit bg-white text-black font-semibold py-1 px-2 mt-6 mb-2 rounded-lg hover:scale-105 transition ease-in-out duration-150 text-center"
                 target="_blank" rel="noopener noreferrer"
                 >
-                    Play Now!
+                    {props.text}
                 </Link>
                 <Link href={`${props.panduan}`}
                     target="_blank" rel="noopener noreferrer"

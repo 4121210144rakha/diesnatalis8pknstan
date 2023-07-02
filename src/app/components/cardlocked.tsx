@@ -32,7 +32,7 @@ export default function CardLocked(props:any) {
     },[]);
 
     return(
-        <div ref={fadeIn} className="fade-container mt-8 hover:scale-105 hover:border hover:border-gray-300 transition-all duration-300 ease-in-out md:mx-2 w-72 justify-center text-center bg-cover bg-center rounded-xl"  style={{backgroundImage:`url(`+props.url+`)`, height:"28rem"}}>
+        <div ref={fadeIn} className="fade-container m-4 hover:scale-105 hover:border hover:border-gray-300 transition-all duration-300 ease-in-out md:mx-2 w-72 justify-center text-center bg-cover bg-center rounded-xl"  style={{backgroundImage:`url(`+props.url+`)`, height:"28rem"}}>
             <div className="group bottom-0 pb-6 hover:backdrop-blur-sm items-center flex hover:justify-center justify-end flex-col h-full transition duration-200 ease-in-out rounded-xl">
                 <h3 className="text-lg group-hover:hidden"><b>{props.heading}</b></h3>
                 <p className="group-hover:hidden">{props.place}</p>

@@ -4,13 +4,13 @@ export default function Navbar() {
         <nav id="NavigationBar" className="flex sm:py-6 py-4 items-center flex-row top-0 w-screen h-16 sm:h-20 lg:bottom-0 z-10 fixed text-center justify-evenly backdrop-blur-md">
             <Link
                 href={"/#"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
                 <h2>ABOUT</h2>
             </Link>
             <Link
                 href={"/#Events"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
                 <h2>EVENTS</h2>
             </Link>
@@ -26,13 +26,13 @@ export default function Navbar() {
 
             <Link
                 href={"/#Competition"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
                 <h2>COMPETITION</h2>
             </Link>
             <Link
                 href={"/#Crack the Code"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out"
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
                 <h2>CRACK THE CODE</h2>
             </Link>
