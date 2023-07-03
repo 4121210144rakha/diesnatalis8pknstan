@@ -34,7 +34,7 @@ export default function Home() {
 
         <Tenant/>
 
-        <Image src={"/image/footer.jpg"} width={1000} height={1000} alt='Gambar' style={{width:"100vw",height:"100vh"}} className="flex object-cover mask-image-to-top"/>
+        <Image src={"https://s6.imgcdn.dev/vlVqS.jpg"} width={1000} height={1000} alt='Gambar' style={{width:"100vw",height:"100vh"}} className="flex object-cover mask-image-to-top"/>
       </div>
     )
   )
