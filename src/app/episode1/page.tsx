@@ -73,30 +73,27 @@ export default function Episode1() {
   return (
     isLoad? (<Loading/>):(
       <>
-        <section className="h-screen flex flex-col items-center justify-center">
-            <div className="relative" style={{height:document.getElementById("video1")?.style.height}}>
-              <div className='peer h-screen w-screen relative'>
-                <button onClick={()=> {
+        <section className="flex flex-col items-center justify-center">
+            <div className="relative">
+              <video
+                id="video1" 
+                ref={videoRef}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata} 
+                className="w-screen"
+              >
+                <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
+              </video>
+              <button id='btnWrap' onClick={()=> {
                     videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
                   }}
-                  className="h-screen w-screen absolute top-0 left-0 z-10 opacity-0 cursor-default"
+                  className="peer w-screen z-10 h-full absolute bottom-0 opacity-0 cursor-default"
                   ref = {handlePlayerIcon}
                   >
-                    Play
+                    Playsadoijafjdaidsjdoasisda
                 </button>
-                <video
-                  id="video1" 
-                  ref={videoRef}
-                  onTimeUpdate={handleTimeUpdate}
-                  onLoadedMetadata={handleLoadedMetadata} 
-                  className="h-screen w-screen absolute top-0 left-0" 
-                  style={{width:"100vw"}}
-                >
-                  <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
-                </video>
-              </div>
 
-              <div id="videoPlayer" className="w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
+              <div id="videoPlayer" className="z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
                 <progress 
                   value={currentTime}
                   max={duration}
@@ -162,11 +159,14 @@ export default function Episode1() {
               </div>
             </div>
         </section>
-        <section className='p-4 w-screen'>
-          <form className='flex flex-col'>
-            <textarea id="comment" placeholder="Write a comment..." className="w-full border rounded-md" maxLength={100}></textarea>
+        <section className='m-4 sm:px-96'>
+          <form className=''>
+            <textarea id="comment" placeholder="Write a comment..." className="w-full `border rounded-md" maxLength={100}></textarea>
             <button type="submit" className="p-2 flex w-fit bg-white text-black font-semibold m-2 ml-0 rounded-md">Add comment</button>
           </form>
+        </section>
+        <section>
+          <h3></h3>
         </section>
       </>
     )
