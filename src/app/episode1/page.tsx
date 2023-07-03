@@ -4,28 +4,28 @@ import React, { useState, useEffect, useRef, use } from 'react'
 import Loading from "../components/Loading";
 
 export default function Episode1() {
-  // const [currentTime, setCurrentTime] = useState(0);
-  // const [duration, setDuration] = useState(0);
-  // const videoRef = useRef<HTMLVideoElement | null>(null);
-  // const formatTime = (time:number) => {
-  //   const minutes = Math.floor(time / 60);
-  //   const seconds = Math.floor(time % 60);
-  //   return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-  // };
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const formatTime = (time:number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
 
-  // const handleTimeUpdate = () => {
-  //   if(videoRef.current) {
-  //     const { currentTime } = videoRef.current;
-  //     setCurrentTime(currentTime);
-  //   }
-  // };
+  const handleTimeUpdate = () => {
+    if(videoRef.current) {
+      const { currentTime } = videoRef.current;
+      setCurrentTime(currentTime);
+    }
+  };
 
-  // const handleLoadedMetadata = () => {
-  //   if(videoRef.current) {
-  //     const { duration } = videoRef.current;
-  //     setDuration(duration);
-  //   }
-  // };
+  const handleLoadedMetadata = () => {
+    if(videoRef.current) {
+      const { duration } = videoRef.current;
+      setDuration(duration);
+    }
+  };
 
   const[isLoad,setLoading] =  useState(true);
   useEffect(() => {
@@ -36,48 +36,51 @@ export default function Episode1() {
       
   }, []);
 
-  // useEffect(
-  //   ()=>{
-  //     document.getElementById("NavigationBar")?.classList.add("hidden");
-  //     if(videoRef.current) {
-  //       if(videoRef.current.currentTime >= 5) {
-  //         alert("ok");
-  //       }
-  //     }
-  //   },
-  //   []
-  // );
+  useEffect(
+    ()=>{
+      document.getElementById("NavigationBar")?.classList.add("hidden");
+      if(videoRef.current) {
+        if(videoRef.current.currentTime >= videoRef.current.duration) {
+          alert("ok");
+        }
+      }
+    },
+    []
+  );
 
-  // const handlePlayerIcon = () => {
-  //   let playIcon = document.getElementById("iconPlay");
-  //   let pauseIcon = document.getElementById("iconPause");
-  //   if(videoRef.current?.paused) {
-  //     playIcon?.classList.remove("hidden");
-  //     pauseIcon?.classList.add("hidden");
-  //   } else {
-  //     pauseIcon?.classList.remove("hidden");
-  //     playIcon?.classList.add("hidden");
-  //   }
-  // }
+  const handlePlayerIcon = () => {
+    let playIcon = document.getElementById("iconPlay");
+    let pauseIcon = document.getElementById("iconPause");
+    if(videoRef.current?.paused) {
+      playIcon?.classList.remove("hidden");
+      pauseIcon?.classList.add("hidden");
+    } else {
+      pauseIcon?.classList.remove("hidden");
+      playIcon?.classList.add("hidden");
+    }
+  }
 
-  // const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { value } = e.target;
-  //   setCurrentTime(Number(value));
-  //   if(videoRef.current) {
-  //     videoRef.current.currentTime = Number(value);
-  //   }
-  // };
+  const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setCurrentTime(Number(value));
+    if(videoRef.current) {
+      videoRef.current.currentTime = Number(value);
+    }
+  };
+
+  
   
   return (
     isLoad? (<Loading/>):(
       <>
         <section className="h-screen flex flex-col items-center justify-center">
-            {/* <div className="border border-green-500 relative" style={{height:document.getElementById("video1")?.style.height}}>
-              <div>
+            <div className="relative" style={{height:document.getElementById("video1")?.style.height}}>
+              <div className='peer h-screen w-screen relative'>
                 <button onClick={()=> {
                     videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
                   }}
-                  className="h-screen"
+                  className="h-screen w-screen absolute top-0 left-0 z-10 opacity-0 cursor-default"
+                  ref = {handlePlayerIcon}
                   >
                     Play
                 </button>
@@ -86,10 +89,10 @@ export default function Episode1() {
                   ref={videoRef}
                   onTimeUpdate={handleTimeUpdate}
                   onLoadedMetadata={handleLoadedMetadata} 
-                  className="peer h-screen" 
+                  className="h-screen w-screen absolute top-0 left-0" 
                   style={{width:"100vw"}}
                 >
-                  <source src={"/videos/episode1/zoom.mp4"} type='video/mp4'/>
+                  <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
                 </video>
               </div>
 
@@ -97,10 +100,12 @@ export default function Episode1() {
                 <progress 
                   value={currentTime}
                   max={duration}
-                  className="w-full">
+                  className="w-full"
+                  
+                >
                 </progress>
                 
-                <div className="flex flex-row justify-start w-full pt-2">
+                <div className="flex flex-row justify-start w-full pt-2 z-20">
                   <button onClick={()=>{
                       let video = document.getElementById("video1");
                       if(video instanceof HTMLVideoElement){
@@ -155,8 +160,13 @@ export default function Episode1() {
                   OPSI B
                 </button>
               </div>
-              
-            </div> */}
+            </div>
+        </section>
+        <section className='p-4 w-screen'>
+          <form className='flex flex-col'>
+            <textarea id="comment" placeholder="Write a comment..." className="w-full border rounded-md" maxLength={100}></textarea>
+            <button type="submit" className="p-2 flex w-fit bg-white text-black font-semibold m-2 ml-0 rounded-md">Add comment</button>
+          </form>
         </section>
       </>
     )

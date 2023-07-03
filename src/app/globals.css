@@ -68,22 +68,30 @@ body {
     --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
+/* 
 .shine {
   animation: glitter 6s linear 0s infinite normal;
   -webkit-animation: glitter 6s linear 0s infinite normal;
   -moz-animation: glitter 8s linear 0s infinite normal;
   -ms-animation: glitter 8s linear 0s infinite normal;
   -o-animation: glitter 8s linear 0s infinite normal;
-}
-
-/* input:-webkit-autofill,
+} */
+/* 
+input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: black !important;
+    -webkit-background-origin: none;
 } */
+
+textarea {
+  resize: none;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
 input[type='range'] {
   -webkit-appearance: none !important;
   background:none;
@@ -121,4 +129,9 @@ progress::-moz-progress-bar {
 
 .fade-container.fade-in {
   opacity: 1;
+}
+progress[value]::-webkit-progress-value {
+  transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
 }
