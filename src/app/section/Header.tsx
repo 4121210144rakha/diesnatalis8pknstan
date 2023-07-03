@@ -7,7 +7,7 @@ export default function Header() {
         <section className="h-screen mask-image-to-bottom">
             <video id='backgroundVideo' className="mask-image-to-bottom object-cover fixed h-screen w-screen -z-50 top-0 left-0 right-0 bottom-0" autoPlay={true} loop={true} height={1000} width={1000}><source src={"/videos/trailer.mp4"}/></video>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Image src={"https://s6.imgcdn.dev/vlAZ8.webp"} fetchPriority='high' width={500} height={500} alt='Logo Diesnat 8' className='flex w-full xl:px-96'/>
+                <Image src={"https://s6.imgcdn.dev/vlAZ8.webp"} fetchPriority='high' width={10000} height={10000} alt='Logo Diesnat 8' className='flex w-full xl:px-96'/>
                 <button
                     onClick={() => {
                         let playIcon = document.getElementById("playIcon");
