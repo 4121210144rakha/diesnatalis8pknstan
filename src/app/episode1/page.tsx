@@ -13,10 +13,20 @@ export default function Episode1() {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
+  useEffect(()=>{
+    document.getElementById("NavigationBar")?.classList.add("hidden");
+  },[]);
+
   const handleTimeUpdate = () => {
+    let videoOption = document.getElementById("videoOption");
     if(videoRef.current) {
       const { currentTime } = videoRef.current;
       setCurrentTime(currentTime);
+      if (Math.floor(videoRef.current.currentTime) == Math.floor(duration)) {
+        videoOption?.classList.remove("hidden");
+        document.getElementById("btnWrap")?.classList.add("hidden")
+        videoRef.current.removeEventListener("timeupdate", handleTimeUpdate);
+      }
     }
   };
 
@@ -36,18 +46,6 @@ export default function Episode1() {
       
   }, []);
 
-  useEffect(
-    ()=>{
-      document.getElementById("NavigationBar")?.classList.add("hidden");
-      if(videoRef.current) {
-        if(videoRef.current.currentTime >= videoRef.current.duration) {
-          alert("ok");
-        }
-      }
-    },
-    []
-  );
-
   const handlePlayerIcon = () => {
     let playIcon = document.getElementById("iconPlay");
     let pauseIcon = document.getElementById("iconPause");
@@ -60,13 +58,13 @@ export default function Episode1() {
     }
   }
 
-  const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setCurrentTime(Number(value));
-    if(videoRef.current) {
-      videoRef.current.currentTime = Number(value);
-    }
-  };
+  // const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { value } = e.target;
+  //   setCurrentTime(Number(value));
+  //   if(videoRef.current) {
+  //     videoRef.current.currentTime = Number(value);
+  //   }
+  // };
 
   
   
@@ -83,6 +81,12 @@ export default function Episode1() {
                 className="w-screen"
               >
                 <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
+              </video>
+              <video
+                id="excess1" 
+                className="w-screen hidden"
+              >
+                <source src={"/videos/episode1/excess1.mp4"} type='video/mp4'/>
               </video>
               <button id='btnWrap' onClick={()=> {
                     videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
@@ -149,7 +153,7 @@ export default function Episode1() {
                 </div>
               </div>
 
-              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black hidden py-4 ">
+              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black hidden z-30 py-4 ">
                 <button className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
                   OPSI A
                 </button>
