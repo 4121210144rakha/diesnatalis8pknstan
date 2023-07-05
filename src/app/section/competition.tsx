@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 // components
 import Lombacard from '../components/lombacard'
 
@@ -14,7 +12,7 @@ export default function Competition() {
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLSe6uYqw9Hy3HuDKMc24tyZ7cDhe37YCkF5W3_r5jfWy42wKPQ/viewform" image="https://images.unsplash.com/photo-1584661156681-540e80a161d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="PoP (Painting on Polywood)" caption="Express your creativity!" wa="http://wa.me/6281235535951" check="https://docs.google.com/spreadsheets/d/1HfgXshLuw2oMlmmpMvsfmqPsQU0cqE_sGeVqoLtEN0s/edit?usp=sharing" panduan="https://drive.google.com/file/d/1bcZkHNbn9gBtx1UeV56NZSkzY4KkqkMI/preview" text="Play Now!"/>
             </div>
             <div className="flex items-center justify-center mt-6">
-                <Link href={`${'/competition'}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit">MORE COMPETITION &gt;</Link>
+                <a href={`${'/competition'}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit">MORE COMPETITION &gt;</a>
             </div>
         </section>
     )

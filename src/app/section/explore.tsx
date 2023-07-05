@@ -1,6 +1,5 @@
 // components
 import Lombacard from "../components/lombacard"
-import Link from "next/link"
 
 export default function Explore() {
     
@@ -18,7 +17,7 @@ export default function Explore() {
             </div>
             
             <div className="flex items-center justify-center">
-                <Link href={`${'/events'}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit">ALL EVENTS &gt;</Link>
+                <a href={`${'/events'}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit">ALL EVENTS &gt;</a>
             </div>
         </section>
     )
