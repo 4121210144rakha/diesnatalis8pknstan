@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
 
 // Components
 import Loading from './components/Loading'
@@ -28,10 +27,8 @@ export default function Home() {
         <Header/>
 
         <Explore/>
-        <Link href={"/events"} rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit cursor-pointer">ALL EVENTS &gt;</Link>
 
         <Competition/>
-        <Link href={"/competition"} rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit cursor-pointer">MORE COMPETITION &gt;</Link>
 
         <Movie/>
 
