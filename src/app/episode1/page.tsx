@@ -154,7 +154,13 @@ export default function Episode1() {
               </div>
 
               <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black hidden z-30 py-4 ">
-                <button className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
+                <button 
+                  onClick={()=> {
+                    document.getElementById("video1")?.classList.add("hidden");
+                    document.getElementById("excess1")?.classList.remove("hidden");
+                    document.getElementById("videoOption")?.classList.add("hidden");
+                  }}
+                  className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
                   OPSI A
                 </button>
                 <button className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
