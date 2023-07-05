@@ -13,8 +13,6 @@ export default function Competition() {
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLSe9QMaB58hL844a6_l_oCgOIrQdKoKUQsHggwqzqYGsOph7Pw/viewform" image="https://images.unsplash.com/photo-1613951085587-cfe5d0a6cffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=634&q=80" heading="Try to Survive" caption="No escape. Only survival." wa="http://wa.me/6282335195569" check="https://docs.google.com/spreadsheets/d/1UktQI3I1nC4M9LERLGFXi6kRK6tyVa-Mqd2bULx4Vdc/edit#gid=0" panduan="https://drive.google.com/file/d/1aa2aJOYaWd3_jzG9ntTX3bCAQs2sDqKe/preview" text="Play Now!"/>
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLSe6uYqw9Hy3HuDKMc24tyZ7cDhe37YCkF5W3_r5jfWy42wKPQ/viewform" image="https://images.unsplash.com/photo-1584661156681-540e80a161d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="PoP (Painting on Polywood)" caption="Express your creativity!" wa="http://wa.me/6281235535951" check="https://docs.google.com/spreadsheets/d/1HfgXshLuw2oMlmmpMvsfmqPsQU0cqE_sGeVqoLtEN0s/edit?usp=sharing" panduan="https://drive.google.com/file/d/1bcZkHNbn9gBtx1UeV56NZSkzY4KkqkMI/preview" text="Play Now!"/>
             </div>
-            
-            <Link href={"/competition"} rel="noopener noreferrer" className="hover:underline text-blue-500 w-fit cursor-pointer">MORE COMPETITION &gt;</Link>
         </section>
     )
 }
