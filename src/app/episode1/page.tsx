@@ -1,5 +1,6 @@
 "use client"
-import React, { useState, useEffect, useRef, use } from 'react'
+import React, { useState, useEffect, useRef, use } from 'react';
+import Image from 'next/image';
 // Components
 import Loading from "../components/Loading";
 
@@ -7,6 +8,9 @@ export default function Episode1() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  var [src, setSrc] = useState<string>('episode1.mp4');
+  const[isLoad,setLoading] =  useState(true);
+  
   const formatTime = (time:number) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
@@ -14,17 +18,24 @@ export default function Episode1() {
   };
 
   useEffect(()=>{
-    document.getElementById("NavigationBar")?.classList.add("hidden");
-  },[]);
+    setLoading(true);
+      setTimeout(()=>{
+          setLoading(false)
+      }, 0)
+    if(videoRef.current) {videoRef.current.load()};
+  },[src]);
 
   const handleTimeUpdate = () => {
     let videoOption = document.getElementById("videoOption");
     if(videoRef.current) {
       const { currentTime } = videoRef.current;
       setCurrentTime(currentTime);
+
       if (Math.floor(videoRef.current.currentTime) == Math.floor(duration)) {
-        videoOption?.classList.remove("hidden");
-        document.getElementById("btnWrap")?.classList.add("hidden")
+        videoOption?.classList.add("opacity-100");
+        videoOption?.classList.add("z-50");
+        videoOption?.classList.remove("opacity-0")
+        document.getElementById("btnWrap")?.classList.add("hidden");
         videoRef.current.removeEventListener("timeupdate", handleTimeUpdate);
       }
     }
@@ -36,15 +47,6 @@ export default function Episode1() {
       setDuration(duration);
     }
   };
-
-  const[isLoad,setLoading] =  useState(true);
-  useEffect(() => {
-      setLoading(true);
-      setTimeout(()=>{
-          setLoading(false)
-      }, 100)
-      
-  }, []);
 
   const handlePlayerIcon = () => {
     let playIcon = document.getElementById("iconPlay");
@@ -65,52 +67,52 @@ export default function Episode1() {
   //     videoRef.current.currentTime = Number(value);
   //   }
   // };
-
-  
   
   return (
     isLoad? (<Loading/>):(
       <>
-        <section className="flex flex-col items-center justify-center">
-            <div className="relative">
+        <section className="flex flex-col h-screen items-center justify-center">
+            <div className="relative flex mx-56">
+              {/* Video */}
               <video
-                id="video1" 
+                id="video" 
                 ref={videoRef}
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={handleLoadedMetadata} 
-                className="w-screen"
+                className="w-screen rounded-xl"
+                autoPlay={true}
+                key={src}
               >
-                <source src={"/videos/episode1/episode1.mp4"} type='video/mp4'/>
+                <source src={src} type='video/mp4'/>
               </video>
-              <video
-                id="excess1" 
-                className="w-screen hidden"
+              
+              {/* Pause Wrap */}
+              <button
+                id='btnWrap'
+                onClick={()=> {
+                  videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
+                }}
+                className="peer w-screen z-10 h-full absolute bottom-0 opacity-0 cursor-default"
+                ref = {handlePlayerIcon}
               >
-                <source src={"/videos/episode1/excess1.mp4"} type='video/mp4'/>
-              </video>
-              <button id='btnWrap' onClick={()=> {
-                    videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
-                  }}
-                  className="peer w-screen z-10 h-full absolute bottom-0 opacity-0 cursor-default"
-                  ref = {handlePlayerIcon}
-                  >
-                    Playsadoijafjdaidsjdoasisda
-                </button>
+                Play
+              </button>
 
-              <div id="videoPlayer" className="z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
+              {/* Video Player */}
+              <div id='videoPlayer' className=" rounded-b-xl z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
+                {/* Progress Bar */}
                 <progress 
                   value={currentTime}
                   max={duration}
                   className="w-full"
-                  
                 >
                 </progress>
                 
+
                 <div className="flex flex-row justify-start w-full pt-2 z-20">
                   <button onClick={()=>{
-                      let video = document.getElementById("video1");
-                      if(video instanceof HTMLVideoElement){
-                        video.currentTime-=10;
+                      if(videoRef.current){
+                        videoRef.current.currentTime-=5;
                       }
                     }}
                     className="px-2"
@@ -122,16 +124,15 @@ export default function Episode1() {
                   </button>
                   
                   <button onClick={()=>{
-                      let video = document.getElementById("video1");
                       let playIcon = document.getElementById("iconPlay");
                       let pauseIcon = document.getElementById("iconPause");
-                      if(video instanceof HTMLVideoElement){
-                        if (video.paused) {
-                          video.play();
+                      if(videoRef.current){
+                        if (videoRef.current.paused) {
+                          videoRef.current.play();
                           playIcon?.classList.add("hidden");
                           pauseIcon?.classList.remove("hidden");
                         } else {
-                          video.pause();
+                          videoRef.current.pause();
                           playIcon?.classList.remove("hidden");
                           pauseIcon?.classList.add("hidden");
                         }
@@ -148,36 +149,58 @@ export default function Episode1() {
                       <rect x="46" width="23" height="87" fill="white"/>
                     </svg>
                   </button>
+
+                  <button
+                    className='px-2'
+                    onClick={()=>{
+                      window.location.reload();
+                    }}
+                  >
+                    <Image width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/rotate.png" alt="rotate"/>
+                  </button>
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                 </div>
               </div>
 
-              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black hidden z-30 py-4 ">
+              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black -z-50 opacity-0 py-4 transition duration-500 delay-300">
                 <button 
                   onClick={()=> {
-                    document.getElementById("video1")?.classList.add("hidden");
-                    document.getElementById("excess1")?.classList.remove("hidden");
-                    document.getElementById("videoOption")?.classList.add("hidden");
+                    document.getElementById("videoOption")?.classList.add("opacity-0");
+                    document.getElementById("videoOption")?.classList.add("-z-50");
+                    document.getElementById("videoOption")?.classList.remove("opacity-100");
+                    document.getElementById("btnWrap")?.classList.remove("hidden");
+                    setTimeout(()=>{
+                      setSrc('excess1.mp4');
+                      if(videoRef.current){
+                        videoRef.current.play();
+                      }
+                    },900)
                   }}
                   className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
                   OPSI A
                 </button>
-                <button className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
+                <button
+                  onClick={()=> {
+                    document.getElementById("videoOption")?.classList.add("opacity-0");
+                    document.getElementById("videoOption")?.classList.add("-z-50");
+                    document.getElementById("videoOption")?.classList.remove("opacity-100");
+                    document.getElementById("btnWrap")?.classList.remove("hidden");
+                    setTimeout(()=>{
+                      setSrc('excess2.mp4');
+                      if(videoRef.current){
+                        videoRef.current.play();
+                      }
+                    },900)
+                  }}
+                  className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out"
+                >
                   OPSI B
                 </button>
               </div>
             </div>
         </section>
-        <section className='m-4 sm:px-96'>
-          <form className=''>
-            <textarea id="comment" placeholder="Write a comment..." className="w-full `border rounded-md" maxLength={100}></textarea>
-            <button type="submit" className="p-2 flex w-fit bg-white text-black font-semibold m-2 ml-0 rounded-md">Add comment</button>
-          </form>
-        </section>
-        <section>
-          <h3></h3>
-        </section>
+        {/*   */}
       </>
     )
     );

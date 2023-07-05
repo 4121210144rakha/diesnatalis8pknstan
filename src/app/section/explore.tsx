@@ -1,7 +1,5 @@
 // components
-import CardLocked from "@/app/components/cardlocked"
 import Lombacard from "../components/lombacard"
-import Link from "next/link"
 
 export default function Explore() {
     
@@ -19,7 +17,7 @@ export default function Explore() {
             </div>
             
             <div className="flex items-center justify-center">
-                <Link href={"/events"} className="hover:underline text-blue-500 w-fit">ALL EVENTS &gt;</Link>
+                <button onClick={()=>{location.href=`/events`}} className="hover:underline text-blue-500 w-fit">ALL EVENTS &gt;</button>
             </div>
         </section>
     )
