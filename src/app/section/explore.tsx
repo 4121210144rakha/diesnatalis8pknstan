@@ -17,7 +17,7 @@ export default function Explore() {
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLScwoPl15B3I00lRkt9JCjT3DAMBivG7ki12peTvEbHMCGW1QA/closedform" wa="https://wa.me/6281375085265" image="https://images.unsplash.com/photo-1669533035765-43cd173ca448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Donor Darah" caption="GEDUNG N" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1IkLm7vK3KTris-6RJ6rt7UMTs3YMpgUT_QRP7csYaTk/edit#gid=0"/>
             </div>
 
-            <Tautan url="/events" text="ALL EVENTS"/>
+            <Tautan url="https://diesnatpknstan.id/events" text="ALL EVENTS"/>
         </section>
     )
 }
