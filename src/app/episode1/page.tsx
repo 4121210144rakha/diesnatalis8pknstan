@@ -5,12 +5,27 @@ import Image from 'next/image';
 import Loading from "../components/Loading";
 
 export default function Episode1() {
+  const browser = useRef<HTMLDivElement>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   var [src, setSrc] = useState<string>('episode1.mp4');
   const[isLoad,setLoading] =  useState(true);
   
+  const handleFullscreen = () => {
+    if (browser.current) {
+      if (browser.current.requestFullscreen) {
+        browser.current.requestFullscreen();
+      } else if ((browser.current as any).mozRequestFullScreen) {
+        (browser.current as any).mozRequestFullScreen();
+      } else if ((browser.current as any).webkitRequestFullscreen) {
+        (browser.current as any).webkitRequestFullscreen();
+      } else if ((browser.current as any).msRequestFullscreen) {
+        (browser.current as any).msRequestFullscreen();
+      }
+    }
+  };
+
   const formatTime = (time:number) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
@@ -63,7 +78,7 @@ export default function Episode1() {
   return (
     isLoad? (<Loading/>):(
       <>
-        <section className="flex flex-col h-screen items-center justify-center">
+        <section ref={browser} className="flex flex-col h-screen items-center justify-center">
             <div className="relative flex lg:mx-56 sm:mx-24">
               {/* Video */}
               <video
@@ -101,7 +116,7 @@ export default function Episode1() {
                 </progress>
                 
 
-                <div className="flex flex-row justify-start w-full pt-2 z-20">
+                <div className="flex flex-row h-fit items-center w-full pt-1 z-20">
                   <button onClick={()=>{
                       if(videoRef.current){
                         videoRef.current.currentTime-=5;
@@ -153,8 +168,15 @@ export default function Episode1() {
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
-                  <button>
-
+                  <button
+                    onClick={()=>{
+                      document.getElementById("NavigationBar")?.classList.add("hidden");
+                      document.getElementById("Footer")?.classList.add("hidden");
+                      handleFullscreen;
+                    }}
+                    className="right-0 absolute mr-2"
+                  >
+                    <Image width={30} height={30} src={"https://img.icons8.com/sf-regular/48/FFFFFF/full-screen.png"} alt="fulscreen"/>
                   </button>
                 </div>
               </div>
@@ -174,7 +196,7 @@ export default function Episode1() {
                         videoRef.current.play();
                         videoOption?.classList.remove("z-50");
                       }
-                    },750)
+                    },725)
                   }}
                   className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out">
                   OPSI A
@@ -192,7 +214,7 @@ export default function Episode1() {
                         videoRef.current.play();
                         videoOption?.classList.remove("z-50");
                       }
-                    },750)
+                    },725)
                   }}
                   className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out"
                 >
