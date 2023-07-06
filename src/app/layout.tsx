@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth scrollbar-hide">
       <body className={plus_jakarta_sans.className} style={{background:"#0F0E0E"}}>
         <Navbar/>
-        <main>{children}</main>
+        <main onClick={void(0)}>{children}</main>
         <Footer/>
       </body>
       <Analytics/>
