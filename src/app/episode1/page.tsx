@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef, use } from 'react';
+import React, { useState, useEffect, useRef, } from 'react';
 import Image from 'next/image';
 // Components
 import Loading from "../components/Loading";
@@ -59,20 +59,12 @@ export default function Episode1() {
       playIcon?.classList.add("hidden");
     }
   }
-
-  // const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { value } = e.target;
-  //   setCurrentTime(Number(value));
-  //   if(videoRef.current) {
-  //     videoRef.current.currentTime = Number(value);
-  //   }
-  // };
   
   return (
     isLoad? (<Loading/>):(
       <>
         <section className="flex flex-col h-screen items-center justify-center">
-            <div className="relative flex mx-56">
+            <div className="relative flex lg:mx-56 sm:mx-24">
               {/* Video */}
               <video
                 id="video" 
@@ -92,7 +84,7 @@ export default function Episode1() {
                 onClick={()=> {
                   videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
                 }}
-                className="peer w-screen z-10 h-full absolute bottom-0 opacity-0 cursor-default"
+                className="peer w-full z-10 h-full absolute bottom-0 opacity-0 cursor-default"
                 ref = {handlePlayerIcon}
               >
                 Play
@@ -160,40 +152,49 @@ export default function Episode1() {
                   </button>
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
+                  
+                  <button>
+
+                  </button>
                 </div>
               </div>
 
-              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black -z-50 opacity-0 py-4 transition duration-500 delay-300">
+              {/* VIDEO OPTION */}
+              <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black -z-50 opacity-0 sm:h-20 h-12 transition duration-500 delay-300">
                 <button 
                   onClick={()=> {
-                    document.getElementById("videoOption")?.classList.add("opacity-0");
-                    document.getElementById("videoOption")?.classList.add("-z-50");
-                    document.getElementById("videoOption")?.classList.remove("opacity-100");
+                    let videoOption = document.getElementById("videoOption");
+                    videoOption?.classList.add("opacity-0");
+                    videoOption?.classList.add("-z-50");
+                    videoOption?.classList.remove("opacity-100");
                     document.getElementById("btnWrap")?.classList.remove("hidden");
                     setTimeout(()=>{
                       setSrc('excess1.mp4');
                       if(videoRef.current){
                         videoRef.current.play();
+                        videoOption?.classList.remove("z-50");
                       }
-                    },900)
+                    },750)
                   }}
-                  className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out">
+                  className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out">
                   OPSI A
                 </button>
                 <button
                   onClick={()=> {
-                    document.getElementById("videoOption")?.classList.add("opacity-0");
-                    document.getElementById("videoOption")?.classList.add("-z-50");
-                    document.getElementById("videoOption")?.classList.remove("opacity-100");
+                    let videoOption = document.getElementById("videoOption");
+                    videoOption?.classList.add("opacity-0");
+                    videoOption?.classList.add("-z-50");
+                    videoOption?.classList.remove("opacity-100");
                     document.getElementById("btnWrap")?.classList.remove("hidden");
                     setTimeout(()=>{
                       setSrc('excess2.mp4');
                       if(videoRef.current){
                         videoRef.current.play();
+                        videoOption?.classList.remove("z-50");
                       }
-                    },900)
+                    },750)
                   }}
-                  className=" text-gray-500 hover:text-white z-50 hover:scale-110 hover:underline transition duration-150 ease-in-out"
+                  className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out"
                 >
                   OPSI B
                 </button>
