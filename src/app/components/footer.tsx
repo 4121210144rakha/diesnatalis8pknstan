@@ -3,7 +3,7 @@ import '../../app/globals.css'
 
 export default function Footer(){
     return(
-        <footer className="bg-inherit w-screen flex sm:items-center justify-center py-4 flex-col">
+        <footer id="Footer" className="bg-inherit w-screen flex sm:items-center justify-center py-4 flex-col">
             <div className="px-4 flex flex-col justify-center items-center lg:flex-row-reverse">
                 <Link href="#" className="sm:pl-4 py-4 flex w-fit">
                     CONTACT
