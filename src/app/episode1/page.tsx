@@ -89,6 +89,7 @@ export default function Episode1() {
                 className="w-screen rounded-xl"
                 autoPlay={true}
                 key={src}
+                playsInline={true}
               >
                 <source src={src} type='video/mp4'/>
               </video>

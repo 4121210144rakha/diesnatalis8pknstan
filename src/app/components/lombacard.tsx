@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import { useRef, useEffect } from 'react'
 
-export default function Lombacard(props:any) {
+const Card = (props:any) => {
     const fadeIn = useRef<HTMLDivElement|null>(null);
     useEffect(()=>{
         const options = {
@@ -57,3 +57,5 @@ export default function Lombacard(props:any) {
         </div>
     )
 }
+
+export default Card;
