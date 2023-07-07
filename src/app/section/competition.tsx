@@ -1,5 +1,5 @@
 // components
-import Lombacard from '../components/lombacard'
+import Lombacard from '../components/card'
 import Tautan from '../components/tautan'
 
 export default function Competition() {

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import { useRef, useEffect } from 'react';
 
@@ -26,6 +27,8 @@ export default function Tautan(props:any){
     },[]);
 
     return(
-            <Link href={`${props.url}`} rel=" fade-container noopener noreferrer" className="cursor-pointer hover:underline text-blue-500 w-full p-2"><p>{props.text} &gt;</p></Link>
+        <div  ref={fadeIn} className="fade-container">
+            <Link href={`${props.url}`} rel="noopener noreferrer" className="cursor-pointer hover:underline text-blue-500 w-full p-2"><p>{props.text} &gt;</p></Link>
+        </div>
     )
 }

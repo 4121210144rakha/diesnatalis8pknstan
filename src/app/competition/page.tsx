@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react'
 // components
-import Lombacard from '@/app/components/lombacard'
+import Lombacard from '@/app/components/card'
 import Loading from '../components/Loading';
 
 export default function Competition() {

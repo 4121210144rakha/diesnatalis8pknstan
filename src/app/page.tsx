@@ -12,7 +12,7 @@ import Movie from './section/movie'
 import Header from './section/Header'
 import Tenant from './section/Tenant'
 
-export default function Home() {
+const Home = () => {
   const[isLoad,setLoading] =  useState(true);
   useEffect(() => {
     setLoading(true);
@@ -39,3 +39,5 @@ export default function Home() {
     )
   )
 }
+
+export default Home;
