@@ -5,7 +5,7 @@ import CardLocked from "@/app/components/cardlocked"
 import Loading from "../components/Loading";
 import Card from "../components/card";
 
-export default function Events() {
+const Events = () => {
     const[isLoad,setLoading] =  useState(true);
     useEffect(() => {
         setLoading(true);
@@ -51,3 +51,5 @@ export default function Events() {
         )
     )
 }
+
+export default Events;
