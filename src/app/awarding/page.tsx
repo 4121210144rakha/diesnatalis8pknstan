@@ -12,7 +12,9 @@ const Awarding = () => {
     }, []);
     return(
         isLoad?(<Loading/>):(
-            <h1 className='text-3xl font-semibold items-center justify-center h-screen'>THANK YOU FOR YOUR VOTE!!</h1>
+            <div className='items-center justify-center h-screen'>
+                <h1 className='text-3xl font-semibold'>THANK YOU FOR YOUR VOTE!!</h1>
+            </div>
         )
     );
 }
