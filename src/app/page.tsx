@@ -27,18 +27,7 @@ const Home: React.FC = () => {
       <div className="text-center grid grid-cols-1">
         <Header/>
 
-        <Polling/>
-
         <Explore/>
-
-        <div
-          style={{ cursor: 'pointer' }}
-          onClick={() => {
-            console.log('Clicked!');
-          }}
-        >
-          Click me!
-        </div>
 
         <Competition/>
 
