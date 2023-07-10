@@ -11,6 +11,7 @@ import Competition from './section/competition'
 import Movie from './section/movie'
 import Header from './section/Header'
 import Tenant from './section/Tenant'
+import Polling from './section/Polling'
 
 const Home = () => {
   const[isLoad,setLoading] =  useState(true);
@@ -25,6 +26,8 @@ const Home = () => {
     isLoad?(<Loading/>):(
       <div className="text-center grid grid-cols-1">
         <Header/>
+
+        <Polling/>
 
         <Explore/>
 

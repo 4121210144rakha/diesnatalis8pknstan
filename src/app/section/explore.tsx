@@ -1,5 +1,5 @@
 // components
-import Lombacard from "../components/card"
+import CardLocked from "../components/cardlocked"
 import Tautan from "../components/tautan"
 
 export default function Explore() {
@@ -12,12 +12,12 @@ export default function Explore() {
             </p>
 
             <div className="flex flex-col md:flex-row my-10 sm:justify-evenly justify-center items-center">
-                <Lombacard alamat="https://www.eventbrite.com/e/opening-ceremony-dies-natalis-8-pkn-stan-tickets-662254951387" wa="https://wa.me/6282181771647" heading="Opening Ceremony" caption="GEDUNG G" image="https://s6.imgcdn.dev/vl9ki.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1liuYoqIPSLRBn2rqk8PWspiyPPPP-WXi3-9VZTdpThA/edit#gid=0"/>
-                <Lombacard alamat="https://www.eventbrite.com/e/art-gallery-dies-natalis-8-pkn-stan-tickets-669264376767" wa="https://wa.me/6282235409602" heading="Art Gallery" caption="GEDUNG N" image="https://images.unsplash.com/photo-1594794312433-05a69a98b7a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" text="Join Now!" panduan="#" check="/events/artgallery"/>
-                <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLScwoPl15B3I00lRkt9JCjT3DAMBivG7ki12peTvEbHMCGW1QA/closedform" wa="https://wa.me/6281375085265" image="https://images.unsplash.com/photo-1669533035765-43cd173ca448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" heading="Donor Darah" caption="GEDUNG N" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1IkLm7vK3KTris-6RJ6rt7UMTs3YMpgUT_QRP7csYaTk/edit#gid=0"/>
+                <CardLocked alamat="https://wa.me/6282276264815" heading="Sidang Senat" place="GEDUNG G" url="https://s6.imgcdn.dev/vlRrH.png"/>
+                <CardLocked alamat="https://wa.me/6281391640148" heading="Acara Puncak" place="GEDUNG G" url="https://s6.imgcdn.dev/vlO82.png"/>
+                <CardLocked alamat="https://wa.me/6281285604102" heading="Closing Ceremony" place="GEDUNG G" url="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"/>
             </div>
 
-            <Tautan url="/events" text="ALL EVENTS"/>
+            <Tautan alamat="/events" text="ALL EVENTS"/>
         </section>
     )
 }
