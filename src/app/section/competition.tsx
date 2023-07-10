@@ -15,10 +15,10 @@ const Competition: React.FC = () => {
             
             <Link onClick={()=>{}} href={`/competition`} rel="noopener noreferrer" className="hover:underline text-blue-500 w-full p-2" style={{cursor:"pointer"}}><p>ALL EVENTS &gt;</p></Link>
             
-            <div className="group hover:scale-100 transition duration-200 ease-in-out mx-4">
-                <div id="down" className="transition duration-500 ease-in-out px-2 bg-black bg-opacity-80">
+            <div className="group transition duration-200 ease-in-out mx-4">
+                <div id="down" className="-translate-y-0 group-hover:-translate-y-0 transition duration-500 ease-in-out px-2 bg-black bg-opacity-80">
                     <Link href={"/#"}
-                    className="flex flex-col justify-center h-fit bg-white text-black font-semibold py-1 px-2 mt-6 mb-2 rounded-lg hover:scale-100 transition ease-in-out duration-150 text-center"
+                    className="flex flex-col justify-center h-fit bg-white text-black font-semibold py-1 px-2 mt-6 mb-2 rounded-lg transition ease-in-out duration-150 text-center"
                     target="_blank" rel="noopener noreferrer"
                     >
                         Test
