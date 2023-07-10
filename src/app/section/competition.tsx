@@ -13,7 +13,11 @@ const Competition: React.FC = () => {
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLSe6uYqw9Hy3HuDKMc24tyZ7cDhe37YCkF5W3_r5jfWy42wKPQ/viewform" image="https://images.unsplash.com/photo-1584661156681-540e80a161d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="PoP (Painting on Polywood)" caption="Express your creativity!" wa="http://wa.me/6281235535951" check="https://docs.google.com/spreadsheets/d/1HfgXshLuw2oMlmmpMvsfmqPsQU0cqE_sGeVqoLtEN0s/edit?usp=sharing" panduan="https://drive.google.com/file/d/1bcZkHNbn9gBtx1UeV56NZSkzY4KkqkMI/preview" text="Play Now!"/>
             </div>
             
-            <Link href={`/competition`} rel="noopener noreferrer" className="-translate-y-0 hover:-translate-y-0 hover:underline text-blue-500 w-full p-2" style={{cursor:"pointer"}}><p>ALL EVENTS &gt;</p></Link>
+            <div className="group">
+                <div className="-translate-y-0 group-hover:-translate-y-0 ">
+                    <Link href={`/competition`} rel="noopener noreferrer" className="transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>MORE COMPETITION &gt;</p></Link>
+                </div>
+            </div>
         </section>
     )
 }
