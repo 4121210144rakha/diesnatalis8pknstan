@@ -17,10 +17,7 @@ const Explore:React.FC = () => {
                 <CardLocked alamat="https://wa.me/6281285604102" heading="Closing Ceremony" place="GEDUNG G" url="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"/>
             </div>
 
-
-            <div className="cursor-pointer group" onClick={()=>{}} style={{ cursor: 'pointer' }}>
-                <Link href={`/events`} rel="noopener noreferrer" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
-            </div>
+            <Link href={`/events`} rel="noopener noreferrer" className="-translate-y-0 hover:-translate-y-0 transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
         </section>
     )
 }
