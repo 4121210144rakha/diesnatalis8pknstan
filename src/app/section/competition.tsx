@@ -13,9 +13,18 @@ const Competition: React.FC = () => {
                 <Lombacard alamat="https://docs.google.com/forms/d/e/1FAIpQLSe6uYqw9Hy3HuDKMc24tyZ7cDhe37YCkF5W3_r5jfWy42wKPQ/viewform" image="https://images.unsplash.com/photo-1584661156681-540e80a161d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" heading="PoP (Painting on Polywood)" caption="Express your creativity!" wa="http://wa.me/6281235535951" check="https://docs.google.com/spreadsheets/d/1HfgXshLuw2oMlmmpMvsfmqPsQU0cqE_sGeVqoLtEN0s/edit?usp=sharing" panduan="https://drive.google.com/file/d/1bcZkHNbn9gBtx1UeV56NZSkzY4KkqkMI/preview" text="Play Now!"/>
             </div>
             
-            <div className="cursor-pointer group" onClick={()=>{}} style={{ cursor: 'pointer' }}>
-                <Link href={`/competition`} rel="noopener noreferrer" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
+            <Link onClick={()=>{}} href={`/competition`} rel="noopener noreferrer" className="hover:underline text-blue-500 w-full p-2" style={{cursor:"pointer"}}><p>ALL EVENTS &gt;</p></Link>
+            
+            <div className="group hover:scale-105 transition duration-200 ease-in-out mx-4">
+            <div id="down" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out px-2 bg-black bg-opacity-80">
+                <Link href={"/#"}
+                className="flex flex-col justify-center h-fit bg-white text-black font-semibold py-1 px-2 mt-6 mb-2 rounded-lg hover:scale-105 transition ease-in-out duration-150 text-center"
+                target="_blank" rel="noopener noreferrer"
+                >
+                    Test
+                </Link>
             </div>
+        </div>
         </section>
     )
 }
