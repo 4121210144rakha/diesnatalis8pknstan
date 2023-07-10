@@ -1,4 +1,3 @@
-import Tautan from "../components/tautan";
 const Polling = () => {
     return(
         <section id="Pooling" className="py-8">

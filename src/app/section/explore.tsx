@@ -1,8 +1,8 @@
 // components
 import CardLocked from "../components/cardlocked"
-import Tautan from "../components/tautan"
+import Link from "next/link"
 
-export default function Explore() {
+const Explore:React.FC = () => {
     
     return(
         <section id="Events" className="my-16">
@@ -17,7 +17,12 @@ export default function Explore() {
                 <CardLocked alamat="https://wa.me/6281285604102" heading="Closing Ceremony" place="GEDUNG G" url="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"/>
             </div>
 
-            <Tautan alamat="/events" text="ALL EVENTS"/>
+
+            <div className="cursor-pointer group" onClick={()=>{}} style={{ cursor: 'pointer' }}>
+                <Link href={`/events`} rel="noopener noreferrer" className="-translate-y-28 group-hover:-translate-y-56 transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
+            </div>
         </section>
     )
 }
+
+export default Explore;
