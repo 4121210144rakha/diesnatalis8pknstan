@@ -12,7 +12,9 @@ const Awarding = () => {
     }, []);
     return(
         isLoad?(<Loading/>):(
-            <iframe src="https://www.menti.com/alatrybzcrhx" className="mt-24 w-screen h-screen scrollbar-hide mask-image-to-bottom-for-iframe" style={{scrollbarWidth:"none"}}></iframe>
+            <div className='items-center justify-center flex h-screen'>
+                <h1>SORRY THIS PAGE IS UNDER CONSTRUCTION</h1>
+            </div>
         )
     );
 }
