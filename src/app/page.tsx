@@ -13,7 +13,7 @@ import Header from './section/Header'
 import Tenant from './section/Tenant'
 import Polling from './section/Polling'
 
-const Home = () => {
+const Home: React.FC = () => {
   const[isLoad,setLoading] =  useState(true);
   useEffect(() => {
     setLoading(true);
@@ -30,6 +30,15 @@ const Home = () => {
         <Polling/>
 
         <Explore/>
+
+        <div
+          style={{ cursor: 'pointer' }}
+          onClick={() => {
+            console.log('Clicked!');
+          }}
+        >
+          Click me!
+        </div>
 
         <Competition/>
 
