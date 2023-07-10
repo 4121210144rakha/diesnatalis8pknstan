@@ -17,7 +17,11 @@ const Explore:React.FC = () => {
                 <CardLocked alamat="https://wa.me/6281285604102" heading="Closing Ceremony" place="GEDUNG G" url="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"/>
             </div>
 
-            <Link href={`/events`} rel="noopener noreferrer" className="-translate-y-0 hover:-translate-y-0 transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
+            <div className="group">
+                <div className="-translate-y-0 group-hover:-translate-y-0 ">
+                    <Link href={`/events`} rel="noopener noreferrer" className="transition duration-500 ease-in-out cursor-pointer hover:underline text-blue-500 w-full p-2"><p>ALL EVENTS &gt;</p></Link>
+                </div>
+            </div>
         </section>
     )
 }
