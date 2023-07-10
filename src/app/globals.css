@@ -45,6 +45,14 @@ body {
   mask-image: linear-gradient(to top, transparent 1%, #0F0E0E 45%);
 }
 
+.mask-image-to-bottom-for-iframe {
+  mask-image: linear-gradient(to top, transparent 5%, #0F0E0E 20%);
+}
+
+iframe {
+  scrollbar-width: none !important;
+}
+
 
 .mask-image-to-top {
   mask-image: linear-gradient(to bottom, transparent 2%, #0F0E0E 30%);

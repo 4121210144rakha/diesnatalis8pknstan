@@ -18,13 +18,15 @@ const Home = () => {
     setLoading(true);
     setTimeout(()=>{
       setLoading(false)
-    }, 2000)
+    }, 3000)
 
   }, []);
   return (
     isLoad?(<Loading/>):(
-      <div className="text-center flex flex-col">
+      <div className="text-center grid grid-cols-1">
         <Header/>
+
+        <iframe src="https://www.menti.com/alatrybzcrhx" className='w-screen scrollbar-hide mask-image-to-bottom-for-iframe' style={{height:"120vh"}}></iframe>
 
         <Explore/>
 
