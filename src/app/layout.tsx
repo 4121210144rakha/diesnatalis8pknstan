@@ -15,11 +15,7 @@ export const metadata = {
   keywords: 'PKN STAN, Dies Natalis, Ulang Tahun, Diesnat, Dies Natalis PKN STAN, Ulang Tahun PKN STAN, Ultah PKN STAN',
 }
 
-const RootLayout = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => {
+const RootLayout = ({children}:{children: React.ReactNode}) => {
   return (
     <html lang="en" className="scroll-smooth scrollbar-hide">
       <body className={plus_jakarta_sans.className} style={{background:"#0F0E0E"}}>
