@@ -1,7 +1,7 @@
 import Link from 'next/link'
 // Components
 import EpisodeCard from '../components/episodecard'
-export default function Movie() {
+const Movie = () => {
     return(
         <section id="Crack the Code" className="py-8">
             <h2 className="text-5xl" style={{fontFamily:"Crima"}}><strong>Crack the Code</strong></h2>
@@ -20,3 +20,5 @@ export default function Movie() {
         
     )
 }
+
+export default Movie;

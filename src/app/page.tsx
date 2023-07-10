@@ -26,8 +26,6 @@ const Home = () => {
       <div className="text-center grid grid-cols-1">
         <Header/>
 
-        <iframe src="https://www.menti.com/alatrybzcrhx" className='w-screen scrollbar-hide mask-image-to-bottom-for-iframe' style={{height:"120vh"}}></iframe>
-
         <Explore/>
 
         <Competition/>
