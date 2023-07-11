@@ -107,7 +107,7 @@ export default function Episode1() {
               </button>
 
               {/* Video Player */}
-              <div id='videoPlayer' className=" rounded-b-xl z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
+              <div id='videoPlayer' className=" rounded-b-xl z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 delay-1000 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
                 {/* Progress Bar */}
                 <progress 
                   value={currentTime}
@@ -199,7 +199,7 @@ export default function Episode1() {
                       }
                     },725)
                   }}
-                  className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out">
+                  className="w-full h-full font-semibold text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out">
                   OPSI A
                 </button>
                 <button
@@ -217,7 +217,7 @@ export default function Episode1() {
                       }
                     },725)
                   }}
-                  className="w-full h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out"
+                  className="w-full font-semibold h-full text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out"
                 >
                   OPSI B
                 </button>
