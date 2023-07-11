@@ -40,11 +40,11 @@ const Events = () => {
                     <div className="flex lg:flex-row flex-col sm:justify-evenly justify-center items-center">
                         <Card  alamat="https://docs.google.com/forms/d/e/1FAIpQLSdLXTbLyaijpDV0AxjgEBq_3TFSKAzA-DMeWbBG7W5pw6i4jA/viewform" wa="http://wa.me/6282131002008" heading="Webinar Pengabdian Masyarakat" caption="ONLINE" image="https://images.unsplash.com/photo-1603355811004-d7380f90687f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" text="Join Now!" panduan="#" check="#"/>
                         <Card alamat="https://docs.google.com/forms/d/e/1FAIpQLSeZY_T5u-IRVaakfkJyqhB04bYmj72PhbEIxPPcuu1FZvm_ww/viewform" wa="http://wa.me/6282131002008" heading="Kuliah Umum Komunikasi dan Negosiasi" caption="GEDUNG N" image="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" text="Join Now!" panduan="#" check="#"/>
-                        <CardLocked alamat="https://wa.me/6282276264815" heading="Sidang Senat" place="GEDUNG G" url="https://s6.imgcdn.dev/vlRrH.png"/>
+                        <Card alamat="https://www.eventbrite.com/e/malam-mahakarya-dies-natalis-8-tickets-663358752887" wa="https://wa.me/6281285604102" heading="Malam Mahakarya" caption="GEDUNG G" image="https://images.unsplash.com/photo-1560195183-570e72bb6fd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" text="Join Now!" panduan="#" check="#"/>
                     </div>
                     <div className="flex lg:flex-row flex-col sm:justify-evenly justify-center items-center">
+                        <CardLocked alamat="https://wa.me/6282276264815" heading="Sidang Senat" place="GEDUNG G" url="https://s6.imgcdn.dev/vlRrH.png"/>
                         <CardLocked alamat="https://wa.me/6281391640148" heading="Acara Puncak" place="GEDUNG G" url="https://s6.imgcdn.dev/vlO82.png"/>
-                        <CardLocked alamat="https://wa.me/6281285604102" heading="Malam Mahakarya" place="GEDUNG G" url="https://images.unsplash.com/photo-1560195183-570e72bb6fd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"/>
                     </div>
                 </section>
             </>
