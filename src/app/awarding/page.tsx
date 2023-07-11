@@ -12,7 +12,7 @@ const Awarding = () => {
     }, []);
     return(
         isLoad?(<Loading/>):(
-            <iframe src='https://www.menti.com/alatrybzcrhx' className='w-screen h-screen scrollbar-hide mask-image-to-bottom-for-iframe'></iframe>
+            <iframe src='https://www.menti.com/alatrybzcrhx' className='mt-20 w-screen h-screen scrollbar-hide mask-image-to-bottom-for-iframe'></iframe>
         )
     );
 }
