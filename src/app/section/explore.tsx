@@ -3,7 +3,7 @@ import CardLocked from "../components/cardlocked"
 import Link from "next/link"
 import Card from "../components/card"
 
-const Explore:React.FC = () => {
+const Explore = () => {
     
     return(
         <section id="Events" className="my-16">

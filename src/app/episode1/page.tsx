@@ -118,7 +118,7 @@ export default function Episode1() {
                 
 
                 <div className="flex flex-row h-fit items-center w-full pt-1 z-20">
-                  <button onClick={()=>{
+                  <button type="button" onClick={()=>{
                       if(videoRef.current){
                         videoRef.current.currentTime-=5;
                       }
@@ -131,7 +131,7 @@ export default function Episode1() {
                     </svg>
                   </button>
                   
-                  <button onClick={()=>{
+                  <button type="button" onClick={()=>{
                       let playIcon = document.getElementById("iconPlay");
                       let pauseIcon = document.getElementById("iconPause");
                       if(videoRef.current){
@@ -169,7 +169,7 @@ export default function Episode1() {
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
-                  <button
+                  <button type="button"
                     onClick={()=>{
                       document.getElementById("NavigationBar")?.classList.add("hidden");
                       document.getElementById("Footer")?.classList.add("hidden");
@@ -184,7 +184,7 @@ export default function Episode1() {
 
               {/* VIDEO OPTION */}
               <div id="videoOption" className="absolute bottom-0 flex flex-row items-center justify-around w-full bg-black -z-50 opacity-0 sm:h-20 h-12 transition duration-500 delay-300">
-                <button 
+                <button type="button"
                   onClick={()=> {
                     let videoOption = document.getElementById("videoOption");
                     videoOption?.classList.add("opacity-0");
@@ -202,7 +202,7 @@ export default function Episode1() {
                   className="w-full h-full font-semibold text-gray-500 hover:text-white z-50 hover:scale-110 hover:border transition duration-300 ease-in-out">
                   OPSI A
                 </button>
-                <button
+                <button type="button"
                   onClick={()=> {
                     let videoOption = document.getElementById("videoOption");
                     videoOption?.classList.add("opacity-0");

@@ -1,13 +1,13 @@
 "use client"
 import Image from 'next/image';
 
-export default function Header() {
+const Header = () => {
     return(
         <section className="h-screen mask-image-to-bottom mb-48">
             <video id='backgroundVideo' playsInline={true} className="mask-image-to-bottom object-cover fixed h-screen w-screen -z-50 top-0 left-0 right-0 bottom-0" onCanPlayThrough={()=>{document.getElementById("backgroundVideo")}} autoPlay={true} loop={true} height={1000} width={1000}><source src={"/videos/trailer.mp4"}/></video>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <Image src={"https://s6.imgcdn.dev/vlAZ8.webp"} fetchPriority='high' width={10000} height={10000} alt='Logo Diesnat 8' className='flex w-full xl:px-96'/>
-                <button
+                <button type="button"
                     onClick={() => {
                         let playIcon = document.getElementById("playIcon");
                         let pauseIcon = document.getElementById("pauseIcon");
@@ -39,3 +39,5 @@ export default function Header() {
         </section>
     )
 }
+
+export default Header;
