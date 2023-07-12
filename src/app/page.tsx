@@ -26,14 +26,14 @@ const Home: React.FC = () => {
     isLoad?(<Loading/>):(
       <div className="text-center grid grid-cols-1">
         <Header/>
+        
+        <Movie/>
 
         <Polling/>
 
         <Explore/>
 
         <Competition/>
-
-        <Movie/>
 
         <Tenant/>
 

@@ -32,9 +32,9 @@ export default function Navbar() {
             </Link>
             <Link
                 href={"/#Crack the Code"}
-                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-28 text-center"
+                className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-fit text-center"
             >
-                <h2>CRACK THE CODE</h2>
+                <h2>VIDEO PUZZLE</h2>
             </Link>
         </nav>
     )
