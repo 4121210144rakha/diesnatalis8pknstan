@@ -124,6 +124,13 @@ const Episode1 = () => {
               >
                 <source src={src} type='video/mp4'/>
               </video>
+
+              <div id='endingTitle' className="w-full z-10 text-center justify-center flex flex-col h-full absolute bottom-0 items-center hidden" >
+                <p className="font-semibold text-2xl text-white">Saksikan kelanjutannya pada Malam Mahakarya</p>
+                <p>Sabtu, 15 Juli 2023</p>
+                <p><time>18:00</time> s.d. <time>21:30</time></p><br></br>
+                <p>GEDUNG G</p>
+              </div>
               
               {/* Pause Wrap */}
               <button
@@ -204,6 +211,12 @@ const Episode1 = () => {
                     }}
                   >
                     <Image width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/rotate.png" alt="rotate"/>
+                  </button>
+
+                  <button
+                    onClick={()=>{if(videoRef.current){videoRef.current.currentTime = duration}}}
+                  >
+                    Fast
                   </button>
                       
                   <span className="mx-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
