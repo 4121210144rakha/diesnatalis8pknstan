@@ -6,13 +6,13 @@ export default function Navbar() {
                 href={"/#"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
-                <h2>ABOUT</h2>
+                <p>ABOUT</p>
             </Link>
             <Link
                 href={"/#Events"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
-                <h2>EVENTS</h2>
+                <p>EVENTS</p>
             </Link>
 
             <Link
@@ -28,13 +28,13 @@ export default function Navbar() {
                 href={"/#Competition"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-20 text-center"
             >
-                <h2>COMPETITION</h2>
+                <p>COMPETITION</p>
             </Link>
             <Link
                 href={"/#Crack the Code"}
                 className="hover:scale-110 hidden sm:block transiton-all duration-300 ease-in-out w-fit text-center"
             >
-                <h2>VIDEO PUZZLE</h2>
+                <p>VIDEO PUZZLE</p>
             </Link>
         </nav>
     )
