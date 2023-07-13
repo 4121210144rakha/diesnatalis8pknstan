@@ -80,6 +80,7 @@ const Episode1 = () => {
           setSource2("/videos/movie/eps 3d.mp4");
         } else if (src == "/videos/movie/eps 3a.mp4" || src == "/videos/movie/eps 3b.mp4" || src == "/videos/movie/eps 3c.mp4" || src == "/videos/movie/eps 3d.mp4") {
           document.getElementById("endingTitle")?.classList.remove("hidden");
+          document.getElementById("videoOption")?.classList.add("hidden");
           videoRef.current.pause();
         }
       }
