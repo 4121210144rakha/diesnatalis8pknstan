@@ -213,12 +213,6 @@ const Episode1 = () => {
                   >
                     <Image width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/rotate.png" alt="rotate"/>
                   </button>
-
-                  <button
-                    onClick={()=>{if(videoRef.current){videoRef.current.currentTime = duration}}}
-                  >
-                    Fast
-                  </button>
                       
                   <span className="mx-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
