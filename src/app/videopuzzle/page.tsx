@@ -78,6 +78,9 @@ const Episode1 = () => {
           setOpsiB("TOLAK");
           setSource1("/videos/movie/eps 3c.mp4");
           setSource2("/videos/movie/eps 3d.mp4");
+        } else if (src == "/videos/movie/eps 3a.mp4" || src == "/videos/movie/eps 3b.mp4" || src == "/videos/movie/eps 3c.mp4" || src == "/videos/movie/eps 3d.mp4") {
+          document.getElementById("endingTitle")?.classList.remove("hidden");
+          videoRef.current.pause();
         }
       }
     }
@@ -154,7 +157,7 @@ const Episode1 = () => {
                         videoRef.current.currentTime-=5;
                       }
                     }}
-                    className="px-2 -translate-y-0 group-hover:-translate-y-0"
+                    className="mx-2 -translate-y-0 group-hover:-translate-y-0"
                   >
                     <svg width="20" height="20" viewBox="0 0 101 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.499996 43.866C-0.16667 43.4811 -0.166669 42.5189 0.499998 42.134L72.5 0.564752C73.1667 0.179852 74 0.660978 74 1.43078L74 84.5692C74 85.339 73.1667 85.8201 72.5 85.4352L0.499996 43.866Z" fill="white"/>
@@ -180,7 +183,7 @@ const Episode1 = () => {
                         }
                       }
                     }}
-                    className="px-2 -translate-y-0 group-hover:-translate-y-0"
+                    className="mx-2 -translate-y-0 group-hover:-translate-y-0"
                   >
                     <svg width="20" height="20" viewBox="0 0 74 86" fill="none" xmlns="http://www.w3.org/2000/svg" id="iconPlay">
                       <path d="M73.5 42.134C74.1667 42.5189 74.1667 43.4811 73.5 43.866L1.49999 85.4352C0.833328 85.8201 -4.03627e-06 85.339 -4.00262e-06 84.5692L-3.68521e-07 1.43078C-3.34872e-07 0.660984 0.833333 0.17986 1.5 0.56476L73.5 42.134Z" fill="white"/>
@@ -195,7 +198,7 @@ const Episode1 = () => {
                   <button
                     title='Reload'
                     type='button'
-                    className='px-2 -translate-y-0 group-hover:-translate-y-0'
+                    className='mx-2 -translate-y-0 group-hover:-translate-y-0'
                     onClick={()=>{
                       window.location.reload();
                     }}
@@ -203,7 +206,7 @@ const Episode1 = () => {
                     <Image width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/rotate.png" alt="rotate"/>
                   </button>
                       
-                  <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
+                  <span className="mx-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
                   <button
                     title='Fullscreen'
