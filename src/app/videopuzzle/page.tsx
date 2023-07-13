@@ -11,6 +11,7 @@ const Episode1 = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   var [src, setSrc] = useState<string>('/videos/movie/eps 1.mp4');
   const[isLoad,setLoading] =  useState(true);
+  var hcb_user = {};
 
   var [opsiA, setOpsiA] = useState<string>('KERJA');
   var [opsiB, setOpsiB] = useState<string>('KULIAH');
@@ -101,7 +102,6 @@ const Episode1 = () => {
       playIcon?.classList.add("hidden");
     }
   }
-  
   return (
     isLoad? (<Loading/>):(
       <>
@@ -117,6 +117,7 @@ const Episode1 = () => {
                 autoPlay={true}
                 key={src}
                 playsInline={true}
+                onCanPlayThrough={()=>{videoRef.current?.play()}}
               >
                 <source src={src} type='video/mp4'/>
               </video>
@@ -192,23 +193,12 @@ const Episode1 = () => {
                   >
                     <Image width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/rotate.png" alt="rotate"/>
                   </button>
-
-                  <button
-                    onClick={()=>{
-                      if(videoRef.current){
-                        videoRef.current.currentTime=duration;
-                      }
-                    }}
-                  >
-                    Fast Forward to end (TESTING)
-                  </button>
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
                   <button type="button"
                     onClick={()=>{
                       document.getElementById("NavigationBar")?.classList.add("hidden");
-                      document.getElementById("Footer")?.classList.add("hidden");
                       handleFullscreen;
                     }}
                     className="right-0 absolute mr-2"
