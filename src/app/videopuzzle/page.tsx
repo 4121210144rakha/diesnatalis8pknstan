@@ -116,6 +116,7 @@ const Episode1 = () => {
                 autoPlay={true}
                 key={src}
                 playsInline={true}
+                preload='auto'
                 onCanPlayThrough={()=>{videoRef.current?.play()}}
               >
                 <source src={src} type='video/mp4'/>
