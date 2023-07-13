@@ -12,7 +12,8 @@ const Awarding = () => {
     }, []);
     return(
         isLoad?(<Loading/>):(
-            <iframe title="voting" src="https://www.menti.com/alatrybzcrhx" className='w-screen h-screen scrollbar-hide mask-image-to-bottom-for-iframe'/>
+            <div className="h-screen w-screen items-center justify-center flex flex-col"><h1 className="font-semibold text-2xl">THANK YOU FOR YOUR VOTE</h1>
+</div>
         )
     );
 }
