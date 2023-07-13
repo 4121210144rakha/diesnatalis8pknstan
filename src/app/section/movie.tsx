@@ -14,7 +14,7 @@ const Movie = () => {
             </div>
 
             <div className="flex items-center justify-center">
-                <Link href={"#"} className="-translate-y-0 hover:-translate-y-0 hover:underline text-blue-500 transition duration-150 ease-in-out w-fit">WATCH NOW! &gt;</Link>
+                <Link href={"/videopuzzle"} className="-translate-y-0 hover:-translate-y-0 hover:underline text-blue-500 transition duration-150 ease-in-out w-fit">WATCH NOW! &gt;</Link>
             </div>
         </section>
         
