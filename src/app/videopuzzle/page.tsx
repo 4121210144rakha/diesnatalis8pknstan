@@ -163,7 +163,7 @@ const Episode1 = () => {
                   </button>
                   
                   <button 
-                    title='PlayNPause'
+                    title='Play/Pause'
                     type="button"
                     onClick={()=>{
                       let playIcon = document.getElementById("iconPlay");
@@ -193,7 +193,7 @@ const Episode1 = () => {
                   </button>
 
                   <button
-                    title='reload'
+                    title='Reload'
                     type='button'
                     className='px-2'
                     onClick={()=>{
@@ -206,7 +206,7 @@ const Episode1 = () => {
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
                   <button
-                    title='fullscreen'
+                    title='Fullscreen'
                     type="button"
                     onClick={()=>{
                       document.getElementById("NavigationBar")?.classList.add("hidden");
