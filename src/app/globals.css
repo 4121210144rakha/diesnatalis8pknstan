@@ -12,6 +12,14 @@ Link {
   cursor: pointer;
 }
 
+h1 {
+  font-family: 'crima';
+}
+
+h2 {
+  font-family: 'crima';
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
