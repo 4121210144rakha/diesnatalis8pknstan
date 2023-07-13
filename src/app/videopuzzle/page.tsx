@@ -123,6 +123,7 @@ const Episode1 = () => {
               
               {/* Pause Wrap */}
               <button
+                type='button'
                 id='btnWrap'
                 onClick={()=> {
                   videoRef.current?.paused?videoRef.current.play():videoRef.current?.pause();
@@ -144,7 +145,10 @@ const Episode1 = () => {
                 </progress>
 
                 <div className="flex flex-row h-fit items-center w-full pt-1 z-20">
-                  <button type="button" onClick={()=>{
+                  <button
+                    title='Rewind 10s'
+                    type="button"
+                    onClick={()=>{
                       if(videoRef.current){
                         videoRef.current.currentTime-=5;
                       }
@@ -157,7 +161,10 @@ const Episode1 = () => {
                     </svg>
                   </button>
                   
-                  <button type="button" onClick={()=>{
+                  <button 
+                    title='PlayNPause'
+                    type="button"
+                    onClick={()=>{
                       let playIcon = document.getElementById("iconPlay");
                       let pauseIcon = document.getElementById("iconPause");
                       if(videoRef.current){
@@ -185,6 +192,8 @@ const Episode1 = () => {
                   </button>
 
                   <button
+                    title='reload'
+                    type='button'
                     className='px-2'
                     onClick={()=>{
                       window.location.reload();
@@ -195,7 +204,9 @@ const Episode1 = () => {
                       
                   <span className="px-2"><small>{formatTime(currentTime)} / {formatTime(duration)}</small></span>
                   
-                  <button type="button"
+                  <button
+                    title='fullscreen'
+                    type="button"
                     onClick={()=>{
                       document.getElementById("NavigationBar")?.classList.add("hidden");
                       handleFullscreen;
