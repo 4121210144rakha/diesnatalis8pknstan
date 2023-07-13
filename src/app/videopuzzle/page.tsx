@@ -11,7 +11,6 @@ const Episode1 = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   var [src, setSrc] = useState<string>('/videos/movie/eps 1.mp4');
   const[isLoad,setLoading] =  useState(true);
-  var hcb_user = {};
 
   var [opsiA, setOpsiA] = useState<string>('KERJA');
   var [opsiB, setOpsiB] = useState<string>('KULIAH');
@@ -135,7 +134,7 @@ const Episode1 = () => {
               </button>
 
               {/* Video Player */}
-              <div id='videoPlayer' className=" rounded-b-xl z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 delay-1000 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
+              <div id='videoPlayer' className=" rounded-b-xl z-20 w-full h-fit bottom-0 peer-hover:opacity-100 opacity-0 hover:opacity-100 absolute flex flex-col items-center p-2 bg-black bg-opacity-80 transition ease-in-out duration-150 ">
                 {/* Progress Bar */}
                 <progress 
                   value={currentTime}
