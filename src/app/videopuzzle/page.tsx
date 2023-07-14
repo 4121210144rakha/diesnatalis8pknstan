@@ -18,8 +18,8 @@ const Episode1 = () => {
   var [source2, setSource2] = useState<string>('/videos/movie/eps 2b.mp4');
   
   const handleFullscreen = () => {
+    
     if (browser.current) {
-        browser.current.requestFullscreen();
       if ((browser.current as any).mozRequestFullScreen) {
         (browser.current as any).mozRequestFullScreen();
       } else if ((browser.current as any).webkitRequestFullscreen) {
@@ -126,7 +126,7 @@ const Episode1 = () => {
                 <source src={src} type='video/mp4'/>
               </video>
 
-              <div id='endingTitle' className="w-full z-10 text-center justify-center flex flex-col h-full absolute bottom-0 items-center hidden" >
+              <div id='endingTitle' className="w-full z-50 text-center justify-center flex flex-col h-full absolute bottom-0 items-center hidden" >
                 <p className="font-semibold text-2xl text-white">Saksikan kelanjutannya pada Malam Mahakarya</p>
                 <p>Sabtu, 15 Juli 2023</p>
                 <p><time>18:00</time> s.d. <time>21:30</time></p><br></br>
