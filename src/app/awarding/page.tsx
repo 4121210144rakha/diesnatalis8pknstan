@@ -12,7 +12,7 @@ const Awarding = () => {
     }, []);
     return(
         isLoad?(<Loading/>):(
-           <div className="h-screen w-screen flex flex-col items-center justify-center"><p className="text-2xl font-semibold'>Thank you for your vote</p></div>
+           <div className="h-screen w-screen flex flex-col items-center justify-center"><p className="text-2xl font-semibold">Thank you for your vote</p></div>
         )
     );
 }
