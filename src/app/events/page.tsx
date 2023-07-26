@@ -44,7 +44,7 @@ const Events = () => {
                     </div>
                     <div className="flex lg:flex-row flex-col sm:justify-evenly justify-center items-center">
                         <Card alamat="https://www.eventbrite.com/e/sidang-senat-dan-orasi-ilmiah-tickets-661844263007" wa="https://wa.me/6282276264815" heading="Sidang Senat" caption="GEDUNG G" image="https://s6.imgcdn.dev/vlRrH.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1x7W3uul1EVX1l1ECnyu1xNizItCLKTJ4fbPzPSwqR18/edit#gid=0"/>
-                        <CardLocked alamat="https://wa.me/6281391640148" heading="Acara Puncak" place="GEDUNG G" url="https://s6.imgcdn.dev/vlO82.png"/>
+                        <Card alamat="https://www.eventbrite.com/e/acara-puncak-dies-natalis-8-pkn-stan-tickets-684560658357" wa="https://wa.me/6281391640148" heading="Acara Puncak" caption="GEDUNG G" image="https://s6.imgcdn.dev/vlO82.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1x7W3uul1EVX1l1ECnyu1xNizItCLKTJ4fbPzPSwqR18/edit#gid=0"/>
                     </div>
                 </section>
             </>
