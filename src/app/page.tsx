@@ -27,14 +27,14 @@ const Home: React.FC = () => {
       <div className="text-center grid grid-cols-1">
         <Header/>
         
-        <Movie/>
-
-        <Polling/>
-
         <Explore/>
 
         <Competition/>
 
+        <Movie/>
+
+        <Polling/>
+        
         <Tenant/>
 
         <Image src={"https://s6.imgcdn.dev/vlVqS.jpg"} width={1000} height={1000} alt='Gambar' style={{width:"100vw",height:"100vh"}} className="flex object-cover mask-image-to-top"/>
