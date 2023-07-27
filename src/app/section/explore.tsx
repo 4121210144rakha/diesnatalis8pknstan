@@ -13,7 +13,7 @@ const Explore = () => {
             </p>
 
             <div className="flex flex-col md:flex-row my-10 sm:justify-evenly justify-center items-center">
-                <Card alamat="https://www.eventbrite.com/e/acara-puncak-dies-natalis-8-pkn-stan-tickets-684560658357" wa="https://wa.me/6281391640148" heading="Acara Puncak" caption="GEDUNG G" image="https://s6.imgcdn.dev/vlO82.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1x7W3uul1EVX1l1ECnyu1xNizItCLKTJ4fbPzPSwqR18/edit#gid=0"/>
+                <Card alamat="https://www.eventbrite.com/e/acara-puncak-dies-natalis-8-pkn-stan-tickets-684560658357" wa="https://wa.me/6281391640148" heading="Acara Puncak" caption="GEDUNG G" image="https://s6.imgcdn.dev/xe9bV.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1x7W3uul1EVX1l1ECnyu1xNizItCLKTJ4fbPzPSwqR18/edit#gid=0"/>
                 <Card alamat="https://www.eventbrite.com/e/malam-mahakarya-dies-natalis-8-tickets-663358752887" wa="https://wa.me/6281285604102" heading="Malam Mahakarya" caption="GEDUNG G" image="https://images.unsplash.com/photo-1560195183-570e72bb6fd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" text="Join Now!" panduan="#" check="#"/>
                 <Card alamat="https://www.eventbrite.com/e/sidang-senat-dan-orasi-ilmiah-tickets-661844263007" wa="https://wa.me/6282276264815" heading="Sidang Senat" caption="GEDUNG G" image="https://s6.imgcdn.dev/vlRrH.png" text="Join Now!" panduan="#" check="https://docs.google.com/spreadsheets/d/1x7W3uul1EVX1l1ECnyu1xNizItCLKTJ4fbPzPSwqR18/edit#gid=0"/>
             </div>
